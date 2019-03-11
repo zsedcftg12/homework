@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页·一起帮</title>
+    <style>
+        p.one {
+            border-style: solid;
+            border-width: 2px;
+        }
+
+        .right {
+            position: absolute;
+            right: 0px;
+            width: 1000px;
+            background-color: #ffffff;
+        }
+    </style>
+    <style>
+        head {
+            background-color: #ff172d;
+        }
+    </style>
+    <style>
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        a:link, a:visited {
+            display: block;
+            width: 120px;
+            font-weight: bold;
+            color: #FFFFFF;
+            background-color: #98bf21;
+            text-align: center;
+            padding: 4px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        a:hover, a:active {
+            background-color: #7A991A;
+        }
+    </style>
+    <ul>
+        <li><a href="#求助">求助</a></li>
+        <li><a href="#发布">发布</a></li>
+        <li><a href="#列表">列表</a></li>
+        <li><a href="#督促">督促</a></li>
+        <li><a href="#求督促">求督促</a></li>
+        <li><a href="#督促别人">督促别人</a></li>
+        <li><a href="#我的目标">我的目标</a></li>
+        <li><a href="#我的督促">我的 督促</a></li>
+        <li><a href="#文章">文章</a></li>
+        <li><a href="#列表">列表</a></li>
+        <li><a href="#app下载">app下载</a></li>
+    </ul>
+    <link rel="stylesheet" type="imsage/x-icon" href="~/images/logo-big.ico">
+    <img src="~/images/logo-big.png" alt="17bang" width="48" height="48" />
+    <h3>一起帮·网络互助平台</h3>
+</head>
+
+<body>
+    <h1>注册</h1>
+    <form action="">
+        <p class="one">
+            邀请人：（*必填，没有邀请人）<br />
+            <input type="text" name="邀请人"><br />
+            邀请码：（*必填）<br />
+            <input type="text" name="邀请码">
+            <br /> <br />
+        </p>
+        <div class="right">
+            <h3>说明</h3>
+            1.我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题。<br />
+            2.现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？<br />
+            3.当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。<br />
+            4.公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献。<br />
+            5.赶快加入我们，赚取帮帮币吧！<br />
+            6.👉了解更多
+        </div>
+        用户名：（*必填）<br />
+        <input type="text" name="用户名"><br />
+        密码：（*必填）<br />
+        <input type="password" name="密码"><br />
+        验证密码：（*必填）<br />
+        <input type="password" name="验证密码"><br />
+        验证码：（*必填）<br />
+        <input type="password" name="验证码"><br />
+        <button>提交</button><button>重置</button>
+    </form>
+    <hr />
+    <a href="http://17bang.ren/Register/Home?prepage=%2f">关于我们</a>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f">常见问题</a>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f">意见建议</a>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f">历史通知</a>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f">友情捐赠</a>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f">融资2019</a>
+
+</body>
+@RenderBody()
+</html>
