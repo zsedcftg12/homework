@@ -2,108 +2,208 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/17bang.ico"/>
     <title>首页·一起帮</title>
+    
     <style>
-        p.one {
-            border-style: solid;
-            border-width: 2px;
-        }
-
-        .right {
-            position: absolute;
-            right: 0px;
-            width: 1000px;
+    .pull{float:left}
+    .navbar-right{float:right ;
+                  margin-right:15px;}
+        #guide {
+            top: 0px;
+            position: fixed;
             background-color: #ffffff;
+            border-style: solid;
+            border-width: 1px;
         }
-    </style>
-    <style>
-        head {
-            background-color: #ff172d;
+        .text-center {
+            position: fixed;
+            border-style: solid;
+            border-width: 1px;
+            background-color: #9bfffb;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
-    </style>
-    <style>
+    a{text-decoration:none;}
+        .yellow {
+            background-color: #ffffe0;
+            border: 2px dashed;
+            padding: 0 10px 0 20px;
+            border-radius: 25px;
+        }
+        input {
+            border: 1px solid;
+            border-radius: 4px;
+        }
+        utton {
+            border: 1px solid;
+            border-radius: 5px;
+            background-color:#0094ff
+        }
+        dialog{text-decoration:none}
+        p.border {
+            border-style: solid;
+            border-width: 1px;
+            background-color:#eee;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            float: right;
+            margin-right: 15px;
+        }
 
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 145px;
+            box-shadow: 4px 5px 5px 3px rgba(0,0,0,0.2);
+            padding: 12px 0px;
         }
-
-        li {
-            float: left;
-        }
-
-        a:link, a:visited {
+        .dropdown:hover .dropdown-content {
             display: block;
-            width: 120px;
-            font-weight: bold;
-            color: #FFFFFF;
-            background-color: #98bf21;
-            text-align: center;
-            padding: 4px;
-            text-decoration: none;
-            text-transform: uppercase;
         }
-
-        a:hover, a:active {
-            background-color: #7A991A;
+        .inline{
+            display: inline;
         }
+        .hue {
+            margin: 4px 2px;
+            transition-duration: 0.5s;
+            cursor: pointer;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+        .hue1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #008CBA;
+        }
+            .hue1:hover {
+                background-color: #008CBA;
+                color: white;
+            }
     </style>
-    <ul>
-        <li><a href="#求助">求助</a></li>
-        <li><a href="#发布">发布</a></li>
-        <li><a href="#列表">列表</a></li>
-        <li><a href="#督促">督促</a></li>
-        <li><a href="#求督促">求督促</a></li>
-        <li><a href="#督促别人">督促别人</a></li>
-        <li><a href="#我的目标">我的目标</a></li>
-        <li><a href="#我的督促">我的 督促</a></li>
-        <li><a href="#文章">文章</a></li>
-        <li><a href="#列表">列表</a></li>
-        <li><a href="#app下载">app下载</a></li>
-    </ul>
-    <link rel="stylesheet" type="imsage/x-icon" href="~/images/logo-big.ico">
-    <img src="~/images/logo-big.png" alt="17bang" width="48" height="48" />
-    <h3>一起帮·网络互助平台</h3>
 </head>
-
 <body>
-    <h1>注册</h1>
-    <form action="">
-        <p class="one">
-            邀请人：（*必填，没有邀请人）<br />
-            <input type="text" name="邀请人"><br />
-            邀请码：（*必填）<br />
-            <input type="text" name="邀请码">
-            <br /> <br />
-        </p>
-        <div class="right">
-            <h3>说明</h3>
-            1.我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题。<br />
-            2.现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？<br />
-            3.当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。<br />
-            4.公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献。<br />
-            5.赶快加入我们，赚取帮帮币吧！<br />
-            6.👉了解更多
+    <div id="guide" style="right: 0px;">
+        <div>
+            <img class="pull" src="~/images/logo-big.png" alt="假装自己是个图片😫" style="padding-left: 100px;" />
+            <p class="pull">
+                <span style="font-size:20px;">一起帮</span>
+                <span>·网络互助平台</span>
+            </p>
+        </div><div style="height: 50px;width: 1350px;padding-top: 5px;margin-right: 180px;">
+                  <ul>
+                      <li class="dropdown">
+                          <a class="inline" href="http://17bang.ren/Register/Home?prepage=%2f">未登录</a>
+                          <div class="dropdown-content">
+                              <ul>
+                                  <li><a href="">🔞登陆</a></li>
+                                  <li><a href=" ">📵注册</a></li>
+                                  <li><a href=" ">🚯忘记密码？</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="inline" href="http://17bang.ren/Register/Home?prepage=%2f">App下载</a>
+                          <div class="dropdown-content">
+                              <ul>
+                                  <li><a href="">Android</a></li>
+                                  <li><a href=" ">ios（越狱）</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="inline" href="http://17bang.ren/Register/Home?prepage=%2f">文章</a>
+                          <div class="dropdown-content">
+                              <ul>
+                                  <li><a href="">列表</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="inline" href="http://17bang.ren/Register/Home?prepage=%2f">督促</a>
+                          <div class="dropdown-content">
+                              <ul>
+                                  <li><a href="">求督促</a></li>
+                                  <li><a href="">督促别人</a></li>
+                                  <li><a href="">我的目标</a></li>
+                                  <li><a href="">我的督促</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                      <li class="dropdown">
+                          <a class="inline" href="http://17bang.ren/Register/Home?prepage=%2f">求助</a>
+                          <div class="dropdown-content">
+                              <ul>
+                                  <li><a href="">发布</a></li>
+                                  <li><a href="">列表</a></li>
+                              </ul>
+                          </div>
+                      </li>
+                  </ul>
         </div>
-        用户名：（*必填）<br />
-        <input type="text" name="用户名"><br />
-        密码：（*必填）<br />
-        <input type="password" name="密码"><br />
-        验证密码：（*必填）<br />
-        <input type="password" name="验证密码"><br />
-        验证码：（*必填）<br />
-        <input type="password" name="验证码"><br />
-        <button>提交</button><button>重置</button>
-    </form>
-    <hr />
-    <a href="http://17bang.ren/Register/Home?prepage=%2f">关于我们</a>
-    <a href="http://17bang.ren/Register/Home?prepage=%2f">常见问题</a>
-    <a href="http://17bang.ren/Register/Home?prepage=%2f">意见建议</a>
-    <a href="http://17bang.ren/Register/Home?prepage=%2f">历史通知</a>
-    <a href="http://17bang.ren/Register/Home?prepage=%2f">友情捐赠</a>
-    <a href="http://17bang.ren/Register/Home?prepage=%2f">融资2019</a>
+    </div>
+    <hr style="padding-top: 34px;" />
+    <p class="border" style="margin-left: 100px;margin-right: 100px;font-size: 14px;">™因为发布了求助python爬虫设置代理无效，系统为 asd7231 ③ 自动补充了关注：爬虫代理设置爬虫Python。 asd7231 ③ 已关注10个关键字，系统将不再为你自动补足。请记住修改关键字的路径：导航栏 - 后台 - 个人资料。</p>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f" class="navbar-right" style="margin-right: 100px;">👉全部消息</a>
+    <div style="margin-left: 100px;margin-top: 80px;margin-right: 100px;">
+        <h2>®注册</h2>
+        <hr />
+    </div>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f" class="text-center" style="right: 15px" ;>❔<br />帮助</a>
+    <a href="http://17bang.ren/Register/Home?prepage=%2f" class="text-center" style="right: 15px;margin-top: 50px;";>⁉<br />反馈</a>
+    <div class="navbar-right" style="font-size: 15px;margin-right: 100px;margin-top: 50px;">
+        🔞说明
+        1.我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题。<br />
+        2.现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？<br/>
+        3.当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。<br/>
+        4.公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献。<br/>
+        5.赶快加入我们，赚取帮帮币吧！<br/>
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">👉了解更多</a>
+    </div>
+    <div class="yellow" style="margin-left: 100px;width:250px;font-size: 20px;">
+        <form style="padding-top: 10px;padding-bottom: 10px;">
+            <label>邀请人：（*必填，</label>
+            <a href="http://17bang.ren/Register/Home?prepage=%2f">没有邀请人）</a><br />
+            <input name="邀请人" placeholder="他的用户名，模糊查询只能从头开始" type="text" value="" /><br />
+            <label>邀请码：（*必填）</label><br />
+            <input name="邀请码" placeholder="4位数字" type="text" value="" />
+        </form>
+    </div>
+    <div style="font-size: 20px;">
+        <a style="padding-left: 120px;">用户名：（*必填）</a><br />
+        <input name="用户名" placeholder="登陆用户名" type="text" value="" style="margin-left: 120px;" /><br />
+        <a style="padding-left: 120px;">密码：（*必填）</a><br />
+        <input name="密码" placeholder="不少于4个字符" type="text" value="" style="margin-left: 120px;" /><br />
+        <a style="padding-left: 120px;">验证密码：（*必填）</a><br />
+        <input name="验证密码" placeholder="和密码相同" type="text" value="" style="margin-left: 120px;" /><br />
+        <a style="padding-left: 120px;">验证码：（*必填）</a><br />
+        <input name="验证码" type="text" value="" style="width: 50px;margin-left: 120px;" /><br />
+        <button class="hue hue1" style="margin-left: 120px;font-size: 20px;">提交</button><button class="hue hue1" style="margin-left: 50px;font-size: 20px;">重置</button>
+        <a href="file:///C:\Users\Administrator\Source\Repos\homework\HtmlLearn\HtmlLearn\Pages\Shared\login\log.html" class="log" style="font-size: 12px;margin-left: 50px;">👉登陆</a>
+    </div>
+
+    <hr style="margin-left: 100px;margin-right: 105px;" />
+    <div style="margin-left: 100px;">
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">关于我们</a>
+        l
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">常见问题</a>
+        l
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">意见建议</a>
+        l
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">历史通知</a>
+        l
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">友情捐赠</a>
+        l
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">融资2019</a>
+        l
+    </div>
+    <p class="navbar-right" style="margin-right: 105px;">
+        <a href="http://17bang.ren/Register/Home?prepage=%2f">渝ICP备18007191号（备案）</a>
+        © 2019 - 首顾科技
+    </p>
 
 </body>
 @RenderBody()
