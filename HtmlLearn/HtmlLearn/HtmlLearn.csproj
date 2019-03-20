@@ -5,12 +5,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Shared\login\**" />
+    <Content Remove="Pages\Shared\login\**" />
+    <EmbeddedResource Remove="Pages\Shared\login\**" />
+    <None Remove="Pages\Shared\login\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Pages\Shared\htmlpage.html" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
   </ItemGroup>
 
 </Project>
