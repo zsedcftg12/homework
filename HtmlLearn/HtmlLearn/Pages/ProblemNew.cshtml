@@ -1,116 +1,116 @@
 ﻿@page
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="~/images/17bang.ico" />
-    <title>精品文章·一起帮</title>
-</head>
-<body>
-    <header>
-        <div id="guide">
-            <img src="/images/logo-big.png" ait="一起帮" style="margin-left:170px;float:left;" />
-            <span style="float:left;margin-top:20px;"><span>一起帮</span>·网络互助平台</span>
-            <ul style="margin-right: 200px;float: right;">
-                <li class="dropdown">
-                    <a class="parallel" href="#">求助</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">发布</a></li>
-                            <li><a href="#">列表</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a class="parallel" href="#">督促</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">求督促</a></li>
-                            <li><a href="#">督促别人</a></li>
-                            <li><a href="#">我的目标</a></li>
-                            <li><a href="#">我的督促</a></li>
-                        </ul>
-                    </div>
-
-                <li class="dropdown">
-                    <a class="parallel" href="#">文章</a>
-                    <div class="dropdown-content">
-                        <ul><li><a href="#">列表</a></li></ul>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a class="parallel" href="#">APP下载</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">Android</a></li>
-                            <li><a href="#">ios（越狱）</a></li>
-                        </ul>
-                    </div>
-                <li class="dropdown">
-                    <a class="parallel" href="#">未登陆</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">登陆</a></li>
-                            <li><a href="#">注册</a></li>
-                            <li><a href="#">忘记密码</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <div class="border">
-        <span>
-            求助离职，已经离职了，工资以扣工作服的理由被扣了。的总结被zsedcftg12查看，获得3点帮帮点
-            <a href="#" style="float:right" ;>全部消息</a>
-        </span>
-    </div>
     <main>
-        <div class="page-header">
-            <h1>我要求助</h1>
-        </div>
-        <div>
-            <p>这是你第一次发布求助，求助发布成功系统会奖励你 20<a href="#">帮帮点</a>。</p>
-            <p>
-                你还没有自由发布权限，为了保证求助的质量，我们会帮助你检查完善该求助内容，
-                然后再公开显示，请耐心等待。
-                中途如有任何问题，工作人员会主动和你联系，请注意保持联系方式畅通。
-            </p>
-        </div>
-        <label class="pull-right text-primary">
-            <input id="needRemotehelp" checked="checked" data-val="true" type="checkbox" value="true" />
-            需要远程协助
-        </label>
-        <div>
-            <label>标题：（*必填）</label>
-            <input type="text" class="form-control" placeholder="简明扼要，不超过255字" aria-describedby="basic-addon1" />
-        </div>
-        <div class="input-group">
-            <div class="input-group-btn">
-                <button type="button" class="btn btn-default">--1级--</button>
-                <button type="button" class="btn btn-default">--2级--</button>
+        <div class="container-width">
+            <div class="col-md-9">
+                <h2 class="page-header">
+                <span class=" glyphicon glyphicon-question-sign "></span>
+                我要求助</h2>
+                <div class="info-border">
+                    <p>
+                        这是你第一次发布求助，求助发布成功系统会奖励你 20
+                        <a href="#"><span class=" glyphicon glyphicon-leaf "></span>
+                        帮帮点</a>
+                    </p>
+                    <p>
+                        你还没有<a href="#">自由发布权限</a>，为了保证求助的质量，我们会帮助你检查完善该求助内容，然后再公开显示，请耐心等待。
+                        <br />
+                        中途如有任何问题，工作人员会主动和你联系，请注意保持联系方式畅通。
+                    </p>
+                </div>
+                <form>
+                    <div class="gap">
+                        <div class="checkbox pull-right" style="margin:0px;">
+                            <label><input type="checkbox" value="true" />需要远程结算</label>
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <label>标题：（*必填）</label>
+                        <input type="text" class="form-control" placeholder="简明扼要，不超过255字" aria-describedby="basic-addon1" />
+                    </div>
+                    <div class="gap">
+                        <label>说明：（*必填）</label>
+                        <input type="text" class="form-control" style="width:100%;height:384px;"/>
+                    </div>
+                    <div class="gap">
+                        <label>关键字：（*使用空格分隔）</label>
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="button">---1级---</button>
+                                <button class="btn btn-default" type="button">---2级---</button>
+                            </div>
+                            <input type="text" class="form-control" placeholder="自定义关键字，使用空格分隔" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <label>定向求助：（
+                        <a href="#">推荐
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                            </a>）</label>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">@@</span>
+                            <input type="text" class="form-control" placeholder="输入你想要求助的大神用户名" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <div class="checkbox pull-right" style="margin:0px;">
+                            <label><input type="checkbox" value="true" />据实结算</label>
+                        </div>
+                        <div>
+                            <label>
+                                悬赏
+                                <a href="#" style="color:#cbb41a">帮帮币：</a>
+                                （<a href="#">现有0枚</a>
+                                <span class="glyphicon glyphicon-refresh"></span>
+                                ）
+                            </label>
+                        </div>
+                        <div class="input-group">
+                            <span class="input-group-addon" id="basic-addon1">$</span>
+                            <input type="text" class="form-control" placeholder="正整数，建议10枚以上" aria-describedby="basic-addon1">
+                            <span class="input-group-addon">枚</span>
+                        </div>
+                        <div>
+                            <a class="pull-right" href="#">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                            如何获得帮帮币</a>
+                        </div>
+                    </div>
+                    <div class="gap">
+                        <input class="btn btn-primary" type="submit" value="发布" />
+                        <button class="btn btn-default" type="button">保存</button>
+                    </div>
+                    <hr />
+                </form>
             </div>
-            <input type="text" class="form-control" placeholder="自定义关键字，使用空格分隔">
+            <div class="col-md-3" style="margin-top:50px;">
+                <div class="task-border">
+                    <h4><span class="glyphicon glyphicon-list"></span>新手任务</h4>
+                    <hr />
+                    <p>填写：<a href="#">联系方式</a></p>
+                    <p>激活：<a href="#">Email</a></p>
+                    <p>邀请：<a href="#">邀请我的小伙伴</a></p>
+                    <p>参加：<a href="#">新人测试</a></p>
+                    <p>发布：<a href="#">第一个求助</a></p>
+                    <p>尝试：<a href="#">第一次求助</a></p>
+                    <p>获得：若干<a href="#" style="color:#cbb41a">帮帮币</a></p>
+                </div>
+                <a href="#" class="btn pull-right">
+                <span class=" glyphicon glyphicon-edit "></span>
+                修改</a>
+                <div id="profile-no-picture" class="img-responsive img-thumbnail">
+                    <span id="camera" class="glyphicon glyphicon-picture "></span>
+                    <div>
+                        等待上传中
+                        <span class=" glyphicon glyphicon-hourglass "></span>
+                        。。。
+                    </div>
+                </div>
+                <div class="gap">
+                    用户：
+                    <a href="#">小王子真帅</a>
+                    <a href="#">①</a>
+                    <a href="#" class="pull-right"><span class="glyphicon glyphicon-edit"></span>修改</a>
+                </div>
+            </div>
         </div>
-        <label>定向求助：（<a href="#">推荐</a>）</label>
-        <div class="input-group">
-            <span class="input-group-addon" id="basic-addon1">@@</span>
-            <input type="text" class="form-control" placeholder="输入你想要求助的大神用户名">
-        </div>
-        <label><input data-val="true"id="Settlement"type="checkbox" value="true"/>据实结算</label>
-        <label>悬赏：（<a href="#">现有0枚帮帮币</a>）</label>
-        <div class="input-group">
-            <span class="input-group-addon">$</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-            <span class="input-group-addon">枚</span>
-        </div>
-        <a href="#">如何获得帮帮币？</a>
-        <div>
-            <button type="button" class="btn btn-info">提交</button>
-            <button type="button" class="btn btn-default">保存</button>
-        </div>
-        <hr />
     </main>
-</body>
-</html>

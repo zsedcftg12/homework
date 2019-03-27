@@ -1,385 +1,516 @@
 ﻿@page
-<html>
-<head>
-    @*<link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
-    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
-    <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="~/images/17bang.ico" />
-    <title>精品文章·一起帮</title>
-</head>
-<body>
-    <header>
-        <div id="guide">
-            <img src="/images/logo-big.png" ait="一起帮" style="margin-left:170px;float:left;" />
-            <span style="float:left;margin-top:20px;"><span>一起帮</span>·网络互助平台</span>
-            <ul style="margin-right: 200px;float: right;">
-                <li class="dropdown">
-                    <a class="parallel" href="#">求助</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">发布</a></li>
-                            <li><a href="#">列表</a></li>
-                        </ul>
+<main>
+    <div class="container-width">
+        <div class="col-md-8">
+            <div class="gap">
+                <form>
+                    <div class="pull-left text-muted" style="border-left-width:5px;border-left-style:solid">
+                        <label class="checkbox-inline">
+                            <span class="glyphicon glyphicon-eye-close"></span>
+                            不显示
+                        </label>
+                        <label class="checkbox-inline">
+                            <input checked="checked" type="checkbox" value="true" />
+                            已酬谢
+                        </label>
+                        <label class="checkbox-inline">
+                            <input checked="checked" type="checkbox" value="true" />
+                            已撤销
+                        </label>
+                        <label class="checkbox-inline">
+                            <input checked="checked" type="checkbox" value="true" />
+                            协助中
+                        </label>
                     </div>
-                </li>
-                <li class="dropdown">
-                    <a class="parallel" href="#">督促</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">求督促</a></li>
-                            <li><a href="#">督促别人</a></li>
-                            <li><a href="#">我的目标</a></li>
-                            <li><a href="#">我的督促</a></li>
-                        </ul>
+                    <div class="text-info">
+                        <label class="checkbox-inline">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            只显示
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="true" />
+                            我的关注
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="true" />
+                            有总结
+                        </label>
                     </div>
-
-                <li class="dropdown">
-                    <a class="parallel" href="#">文章</a>
-                    <div class="dropdown-content">
-                        <ul><li><a href="#">列表</a></li></ul>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a class="parallel" href="#">APP下载</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">Android</a></li>
-                            <li><a href="#">ios（越狱）</a></li>
-                        </ul>
-                    </div>
-                <li class="dropdown">
-                    <a class="parallel" href="#">未登陆</a>
-                    <div class="dropdown-content">
-                        <ul>
-                            <li><a href="#">登陆</a></li>
-                            <li><a href="#">注册</a></li>
-                            <li><a href="#">忘记密码</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <div class="border">
-        <span>
-            求助离职，已经离职了，工资以扣工作服的理由被扣了。的总结被zsedcftg12查看，获得3点帮帮点
-            <a href="#" style="float:right" ;>全部消息</a>
-        </span>
-    </div>
-    <main class="frame-size">
-        <div class="float" style="width:660px;">
-            <form>
-                <div style="padding-bottom: 50px;padding-top:50px">
-                    <div class="float" style="border-left:6px solid gray;">
-                        <samp>只显示</samp>
-                        <input type="checkbox" name="ExcludeRewarded" value="true">已酬谢
-                        <input type="checkbox" name="ExcludeCanceled" value="true">已撤销
-                        <input type="checkbox" name="ExcludeInProgress" value="true">协助中
-                    </div>
-                    <div class="float" style="padding-left:25px;">
-                        <samp>不显示</samp>
-                        <input type="checkbox" name="OnlyMyFocus" value="true">我的关注
-                        <input type="checkbox" name="OnlySummaried" value="true">有总结
-                    </div>
-                </div>
-            </form>
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        <samp>2019年03月12日 20点40分</samp>
-                    </small>
-                    <samp style="float:right">作者：<a href="#">asd7231</a></samp>
-                </div>
-                <div>
-                    <samp id="blue-label" class="problem-status">待协助</samp>
-                    <a href="#">python爬虫设置代理无效</a>
-                    <br />
-                    如题，初学python，没有用框架，设置了chrome和PhantomJS代理都没有效果
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">爬虫代理设置</a></span>
-                    <span><a href="#" style="color: white;">爬虫</a></span>
-                    <span><a href="#" style="color: white;">python</a></span>
-                    <span><a href="#" style="color: white;">编程开发语言</a></span>
-                </p>
-                悬赏：20
-                <a href="#">应答：</a>0
-                <a href="#">总结：</a>0
+                </form>
             </div>
-            <hr />
             <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        <samp>2018年07月02日 14点07分</samp>
-                    </small>
-                    <samp style="float:right">作者：<a href="#">那是花开911</a></samp>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2019年03月26日 08点40分</small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#">28zhu⑦</a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info">待协助</span>
+                    <a href="#" class="h3" style="color:black">使用mysqldump导出数据库时需要手动输入密码</a>
+                </div>
+                <div class="clearfix">
+                    目前使用的命令如下：mysqldump -u root -h 127.0.0.1 --password=001 -p db > d:\dumpcd\db.sql在bat文件中每执行到这一句都需要手动输入一下密码
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">MySQL</a>
+                    <a href="#" class="badge">编程</a>
+                    <a href="#" class="badge">数据库</a>
                 </div>
                 <div>
-                    <samp id="label-warning" class="problem-status">协助中</samp>
-                    <a href="#"> ASP 网站迁移</a>
-                    <br />
+                    悬赏:20
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>0
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年07月02日 14点07分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#">那是花开911②</a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info" style="background-color:#f0ad4e">协助中</span>
+                    <a href="#" class="h3" style="color:black">ASP 网站迁移 </a>
+                </div>
+                <div class="clearfix">
                     在服务器上把原先的asp网站整体迁移出来，在新的服务器上重新布置
-                    <a href="#">……</a>
+                    <a href="#">......</a>
                 </div>
-                <p>
-                    <span><a href="#" style="color: white;">asp</a></span>
-                    <span><a href="#" style="color: white;">数据库</a></span>
-                </p>
-                悬赏：实结
-                <a href="#">应答：</a>4
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        <samp>2018年04月26日 15点04分 </samp>
-                    </small>
-                    <samp style="float:right">作者：<a href="#">1462556133</a></samp>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">asp</a>
+                    <a href="#" class="badge">数据库</a>
                 </div>
                 <div>
-                    <samp id="blue-label" class="problem-status">待协助</samp>
-                    <a href="#"> </a>
-                    <br />
-                    <a href="#">……</a>
+                    悬赏:实结
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>4
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
                 </div>
-                <p>
-                    <span><a href="#" style="color: white;">多线程</a></span>
-                    <span><a href="#" style="color: white;">JAVA</a></span>
-                    <span><a href="#" style="color: white;">编程开发语言</a></span>
-                </p>
-                悬赏：实结
-                <a href="#">应答：</a>4
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        <samp>2018年04月20日 17点44分  </samp>
-                    </small>
-                    <samp style="float:right">作者：<a href="#">txdyr</a></samp>
-                </div>
-                <div>
-                    <samp id="blue-label" class="problem-status">待协助</samp>
-                    <a href="#">Winform里控件绑定数据源就会报错</a>
-                    <br />
-                    项目里的控件绑定属性都会出现这个问题
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">VisualStudio</a></span>
-                    <span><a href="#" style="color: white;">工具软件</a></span>
-                    <span><a href="#" style="color: white;">c#</a></span>
-                </p>
-                悬赏：实结
-                <a href="#">应答：</a>3
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        <samp>2018年04月20日 14点06分</samp>
-                    </small>
-                    <samp style="float:right">作者：<a href="#">别闹</a></samp>
-                </div>
-                <div>
-                    <samp id="label-warning" class="problem-status">协助中</samp>
-                    <a href="#">SQL Server多表查询,中间表有字段可能为空</a>
-                    <br />
-                    如图,表B中的D,E,F可能会是空,SQL怎么写,才能保证数据的一致性;
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">数据库</a></span>
-                    <span><a href="#" style="color: white;">sqlserver</a></span>
-                    <span><a href="#" style="color: white;">SQL</a></span>
-                </p>
-                悬赏：30
-                <a href="#">应答：</a>5
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        2018年04月17日 17点12分
-                    </small>
-                    <samp style="float:right">作者：<a href="#">ghwolf</a></samp>
-                </div>
-                <div>
-                    <samp id="blue-label" class="problem-status">待协助</samp>
-                    <a href="#">西安大专应届生找个JAVA开发的工作，有没有推荐的</a>
-                    <br />
-                    本人3个月后毕业，自学3年JAVA，对J2EE的一整套开发体系非常熟悉，OA类的项目做的比较多。荣获第八届蓝桥杯JAVA C组个人赛全国一等奖，之后去上海实习几个月，因为一些原因必须回西安发展，但是投简历无数，要么没有音信，要么第一轮面试结束没有消息，要么学历不过关--。智联上西安的JAVA校招几乎没有，1个月过去了，还是没有工作，我都不求工资，只求有长远发展，不会的我都愿意学，但是不想去那种混日子的公司，要有激情，有创新，有热血的公司。有没有推荐的，或者那位大神觉得我可以内推一下我，至少给个面试机会
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">JAVA</a></span>
-                    <span><a href="#" style="color: white;">职场</a></span>
-                    <span><a href="#" style="color: white;">顾问咨询</a></span>
-                </p>
-                悬赏：0
-                <a href="#">应答：</a>2
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        2018年04月14日 10点50分
-                    </small>
-                    <samp style="float:right">作者：<a href="#">txdyr</a></samp>
-                </div>
-                <div>
-                    <samp id="blue-label" class="problem-status">待协助</samp>
-                    <a href="#">工作快一年，对下份工作的选择</a>
-                    <br />
-                    去年6月份毕业的，今年换工作，目前有两家意向度比较高的offer,一家是大公司，一家是创业公司，不知道现在应该如何选择，请大佬给点意见
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">职场</a></span>
-                    <span><a href="#" style="color: white;">顾问咨询</a></span>
-                </p>
-                悬赏：0
-                <a href="#">应答：</a>6
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        2018年02月08日 09点55分
-                    </small>
-                    <samp style="float:right">作者：<a href="#">wasd</a></samp>
-                </div>
-                <div>
-                    <samp id="blue-label" class="problem-status">待协助</samp>
-                    <a href="#">SVN资源库没有这个文件加 但是提交时却显示冲突</a>
-                    <br />
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">SVN</a></span>
-                    <span><a href="#" style="color: white;">JAVA</a></span>
-                </p>
-                悬赏：10
-                <a href="#">应答：</a>6
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-            <div>
-                <div style="padding-bottom:20px;">
-                    <small>
-                        2018年01月03日 23点04分
-                    </small>
-                    <samp style="float:right">作者：<a href="#">奇葩秋</a></samp>
-                </div>
-                <div>
-                    <samp id="label-warning" class="problem-status">待协中</samp>
-                    <a href="#">python爬虫不能够得到网址</a>
-                    <br />
-                    我去爬了智能招聘的网站，但是用下面那个代码爬到10面的时候，就不能够得到网址importrequestsfrombs4importBeautifulSoupimportredefgetHttp(url) :try:dic={'User-Agent':'Google/10.0'}r
-                    <a href="#">……</a>
-                </div>
-                <p>
-                    <span><a href="#" style="color: white;">爬虫</a></span>
-                    <span><a href="#" style="color: white;">Python</a></span>
-                    <span><a href="#" style="color: white;">编程开发语言</a></span>
-                </p>
-                悬赏：0
-                <a href="#">应答：</a>6
-                <a href="#">总结：</a>0
-            </div>
-            <hr />
-        </div>
-        <div class="content" style="margin-top:50px;">
-            <H2>关键字</H2>
-            <hr />
-            <div id="keyword">
-                <a href="#">编辑开发语言</a>
-                <a href="#">c#</a>
-                <a href="#">JAVA</a>
-                <a href="#">工具软件</a>
-                <a href="#">Javascript</a>
-                <a href="#">顾问咨询</a>
-                <a href="#">html</a>
-                <a href="#">操作系统</a>
-                <a href="#">VisualStudio</a>
-                <a href="#">SQL</a>
-                <a href="#">法律</a>
-                <a href="#">职场</a>
-                <a href="#">python</a>
-                <a href="#">.net</a>
-                <a href="#">css</a>
-                <a href="#">Linux</a>
-                <hr />
-                <input type="text" placeholder="直接输入关键字查找" class="search-frame" />
-                <button type="submit" class="btn btn-default">换一批</button>
-            </div>
-        </div>
-        <div class="article-orientation">
-            <h2>精品文章</h2>
-            <hr />
-            <div>
-                <ol>
-                    <li><a href="#">培训班的同学，拜托不要把用人单位想得那么傻，好不好？！</a></li>
-                    <li><a href="#">人心</a></li>
-                    <li><a href="#">榜样的力量（二）</a></li>
-                    <li><a href="#">榜样的力量</a></li>
-                    <li><a href="#">请个假，立个誓。</a></li>
-                </ol>
-                <a href="#" style="float:right;">更多</a>
-            </div>
-        </div>
-        <div class="article-orientation">
-            <ol>
-                <li><a href="#">线上学习不能自律？试试这个......</a></li>
-                <li><a href="#">“一起帮·程序员客栈”筹办思路</a></li>
-                <li><a href="#">“源栈”2019课程设置</a></li>
-                <li><a href="#">免费广告位，抢到就是赚到！</a></li>
-                <li><a href="#">免费广告位，抢到就是赚到！</a></li>
-                <li>本站主机由<a href="#">西部数码</a>提供</li>
-            </ol>
-            <a href="#" style="float:right;">广告你也可以发布哟！</a>
-        </div>
-    </main>
-    <hr />
-    <footer style="clear:both;margin-left :200px;">
-        <div aria-label="Page navigation">
-            <ul class="pagination">
-                <li>
-                    <a href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li>
-                    <a href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div style="clear:both;padding-top:40px;">
-            <a href="#">关于我们</a>l
-            <a href="#">常见问题</a>l
-            <a href="#">意见建议</a>l
-            <a href="#">历史通知</a>l
-            <a href="#">友情捐赠</a>l
-            <a href="#">融资2018</a>l
-        </div>
-        <samp style="float:right;padding-right:50px;"><a href="#">渝ICP备18007191号（备案）</a>© 2019 - 首顾科技</samp>
-    </footer>
-    <a href="#" class="float-help" style="top:250px;">帮助</a>
-    <a href="#" class="float-help ">反馈</a>
-</body>
-</html>
 
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年04月26日 15点04分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#"> 1462556133②</a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info">待协助</span>
+                    <a href="#" class="h3" style="color:black"></a>
+                </div>
+                <div class="clearfix">
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">多线程</a>
+                    <a href="#" class="badge">JAVA</a>
+                    <a href="#" class="badge">编程开发语言</a>
+                </div>
+                <div>
+                    悬赏:0
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>3
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年04月20日 17点44分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#">txdyr②</a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info">待协助</span>
+                    <a href="#" class="h3" style="color:black">Winform里控件绑定数据源就会报错</a>
+                </div>
+                <div class="clearfix">
+                    项目里的控件绑定属性都会出现这个问题
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">VisualStudio</a>
+                    <a href="#" class="badge">工具软件</a>
+                    <a href="#" class="badge">c#</a>
+                </div>
+                <div>
+                    悬赏:0
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>3
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年04月20日 14点06分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#"> 别闹 ① </a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info"style="background-color:#f0ad4e">协助中</span>
+                    <a href="#" class="h3" style="color:black"> SQL Server多表查询,中间表有字段可能为空</a>
+                </div>
+                <div class="clearfix">
+                    如图,表B中的D,E,F可能会是空,SQL怎么写,才能保证数据的一致性;
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">数据库</a>
+                    <a href="#" class="badge">sqlserver</a>
+                    <a href="#" class="badge">SQL</a>
+                </div>
+                <div>
+                    悬赏:30
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>5
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年04月17日 17点12分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#"> ghwolf ④ </a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info">待协助</span>
+                    <a href="#" class="h3" style="color:black">西安大专应届生找个JAVA开发的工作，有没有推荐的</a>
+                </div>
+                <div class="clearfix">
+                    本人3个月后毕业，自学3年JAVA，对J2EE的一整套开发体系非常熟悉，OA类的项目做的比较多。荣获第八届蓝桥杯JAVA C组个人赛全国一等奖，之后去上海实习几个月，因为一些原因必须回西安发展，但是投简历无数，要么没有音信，要么第一轮面试结束没有消息，要么学历不过关--。智联上西安的JAVA校招几乎没有，1个月过去了，还是没有工作，我都不求工资，只求有长远发展，不会的我都愿意学，但是不想去那种混日子的公司，要有激情，有创新，有热血的公司。有没有推荐的，或者那位大神觉得我可以内推一下我，至少给个面试机会
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">JAVA</a>
+                    <a href="#" class="badge">职场</a>
+                    <a href="#" class="badge">顾问咨询</a>
+                </div>
+                <div>
+                    悬赏:0
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>2
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年04月14日 10点50分</small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#"> txdyr ② </a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info">待协助</span>
+                    <a href="#" class="h3" style="color:black"> 工作快一年，对下份工作的选择</a>
+                </div>
+                <div class="clearfix">
+                    去年6月份毕业的，今年换工作，目前有两家意向度比较高的offer,一家是大公司，一家是创业公司，不知道现在应该如何选择，请大佬给点意见
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">职场</a>
+                    <a href="#" class="badge">顾问咨询</a>
+                </div>
+                <div>
+                    悬赏:0
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>6
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年02月08日 09点55分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#"> wasd② </a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info"style="background-color:#f0ad4e">协助中</span>
+                    <a href="#" class="h3" style="color:black">SVN资源库没有这个文件加 但是提交时却显示冲突</a>
+                </div>
+                <div class="clearfix">
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">svn</a>
+                    <a href="#" class="badge">JAVA</a>
+                </div>
+                <div>
+                    悬赏:10
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>6
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>0
+                    <hr />
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <small class="text-muted">2018年03月27日 09点00分 </small>
+                    <div class="pull-right">
+                        <span class=" glyphicon glyphicon-user "></span>
+                        <a href="#"> 兵乓球小王子② </a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <span class="problem-status label-info">待协助</span>
+                    <a href="#" class="h3" style="color:black">家人和同学都合不来天天吵架怎么办？</a>
+                </div>
+                <div class="clearfix">
+                    他们非说我帅，我不同意他们的看法，他们就打我，一边打我一边还说我喜欢装逼。
+                    <a href="#">......</a>
+                </div>
+                <div class="gap">
+                    <span class="glyphicon glyphicon-tags" style="margin-right:10px"></span>
+                    <a href="#" class="badge">颜值</a>
+                    <a href="#" class="badge">帅哥</a>
+                    <a href="#" class="badge">天下第一</a>
+                </div>
+                <div>
+                    悬赏:99
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-heart" style="color:#ff0000"></span>
+                        应答：
+                    </a>54
+                    <a href="#" style="padding:0px 10px 0px 10px">
+                        <span class="glyphicon glyphicon-wrench"></span>
+                        总结：
+                    </a>789
+                    <hr />
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="article-label">
+                <h2><span class="glyphicon glyphicon-tag"></span>关键字</h2>
+                <hr>
+                <div id="keyword">
+                    <a href="#">编辑开发语言</a>
+                    <a href="#">c#</a>
+                    <a href="#">JAVA</a>
+                    <a href="#">工具软件</a>
+                    <a href="#">Javascript</a>
+                    <a href="#">顾问咨询</a>
+                    <a href="#">html</a>
+                    <a href="#">操作系统</a>
+                    <a href="#">VisualStudio</a>
+                    <a href="#">SQL</a>
+                    <a href="#">法律</a>
+                    <a href="#">职场</a>
+                    <a href="#">python</a>
+                    <a href="#">.net</a>
+                    <a href="#">css</a>
+                    <a href="#">Linux</a>
+                    <hr>
+                    <div class="col-sm-8">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="直接输入关键字查找">
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-search">
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-refresh"></span>
+                        换一批
+                    </button>
+                </div>
+            </div>
+            <div class="clearfix ranking-border">
+                <ul class="nav nav-tabs nav-justified" role="tablist">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-eye-open"></span>每日督促</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-heart"></span>排行榜</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-user"></span>新注册</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active">
+                        <ol class="h4">
+                            <li>
+                                <a href="#">叶飞⑩</a>
+                                <samp class="pull-right">195</samp>
+                            </li>
+                            <li>
+                                <a href="#"> 无蓝孟风 ② </a>
+                                <samp class="pull-right">50</samp>
+                            </li>
+                            <li>
+                                <a href="#">兵乓球小王子⑦ </a>
+                                <samp class="pull-right">135</samp>
+                            </li>
+                            <li>
+                                <a href="#">阿风想睡觉 ①  </a>
+                                <samp class="pull-right">22</samp>
+                            </li>
+                            <li>
+                                <a href="#">ywl0509 ① </a>
+                                <samp class="pull-right">10</samp>
+                            </li>
+                            <li>
+                                <a href="#">chenzhiwei ④ </a>
+                                <samp class="pull-right">10</samp>
+                            </li>
+                            <li>
+                                <a href="#">突突突突突 ① </a>
+                                <samp class="pull-right">10</samp>
+                            </li>
+                            <li>
+                                <a href="#">txdyr ② </a>
+                                <samp class="pull-right">10</samp>
+                            </li>
+                        </ol>
+                        <a href="$" class="pull-right">
+                            <span class="glyphicon glyphicon-hand-right"></span>
+                            我的排行
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="article-label gap" style="margin-top:20px">
+                <div class="h3">
+                    <span class=" glyphicon glyphicon-duplicate "></span>
+                    精品文章
+                    <hr />
+                </div>
+                <div style="padding-bottom:10px">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        学习编程的过程中可能会走哪些弯路，有哪些经验可以参考？
+                    </a>
+                </div>
+                <div style="padding-bottom:10px">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        源栈培训：数据库：2-插入数据
+                    </a>
+                </div>
+                <div style="padding-bottom:10px">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        自学编程和计算机科班出身的差别在哪？
+                    </a>
+                </div>
+                <div style="padding-bottom:10px">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        源栈培训：数据库：1-建库建表
+                    </a>
+                </div>
+                <div style="padding-bottom:10px">
+                    <a href="#">
+                        <span class="glyphicon glyphicon-duplicate"></span>
+                        源栈培训：人人都是程序猿（十二）平衡排序二叉树
+                    </a>
+                </div>
+                <a href="#" class="pull-right">
+                    <span class="glyphicon glyphicon-hand-right"></span>
+                    更多
+                </a>
+            </div>
+            <div class="clearfix keyword-label" style="margin-top:30px;">
+                <ol>
+                    <li><a href="#"> 线上学习不能自律？试试这个……</a></li>
+                    <li><a href="#">“一起帮·程序员客栈”筹办思路 </a></li>
+                    <li><a href="#"> “源栈”2019课程设置 </a></li>
+                    <li><a href="#" style="color:#ff0000"> 免费广告位，抢到就是赚到！</a></li>
+                    <li><a href="#" style="color:#ff0000"> 免费广告位，抢到就是赚到！</a></li>
+                    <li><a href="#"> 本站主机由西部数码提供 </a></li>
+                </ol>
+            </div>
+        </div>
+        </div>
+</main>
