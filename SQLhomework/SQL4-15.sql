@@ -199,3 +199,55 @@
 --JOIN TProblem ON TProblem.Id = ProblemID) sadsf
 --WHERE 分组 = 1
 
+--------------------------------------4.13作业
+--添加帮帮币
+--ALTER TABLE TUser
+--ADD BMoney INT 
+
+--SET XACT_ABORT ON
+
+--添加约束小于0报错
+--ALTER TABLE TUser 
+--ADD CONSTRAINT PK_BMoney CHECK(BMoney>0)
+
+--发布求助，更新用户帮帮币数量
+--BEGIN TRANSACTION
+--BEGIN TRY
+--    INSERT TProblem (Title,Reward,Author)VALUES(N'想要帮帮币',20,4)
+--    UPDATE TUser SET BMoney = BMoney - 20 WHERE Id = 4
+--    COMMIT TRANSACTION
+--END TRY
+--BEGIN CATCH
+--    IF @@TRANCOUNT>0
+--        ROLLBACK;
+--    THROW;
+--END CATCH
+--SELECT * FROM TUser
+
+--丢失的更新（假装他是）
+--BEGIN TRANSACTION
+--  UPDATE TUser SET BMoney = BMoney + 20 WHERE ID = 3
+--  BEGIN TRANSACTION
+--  UPDATE TUser SET BMoney = BMoney * 2  WHERE ID = 3
+--COMMIT TRANSACTION
+--COMMIT TRANSACTION
+
+--SELECT @@TRANCOUNT
+
+----脏读 
+--BEGIN TRANSACTION
+--BEGIN TRY
+--  UPDATE TUser SET BMoney = BMoney - 20 WHERE ID = 3  --第一次更新
+--     BEGIN TRANSACTION
+--	 UPDATE TUser SET BMoney = BMoney -9999   --第二次更新
+--	 COMMIT TRANSACTION    --第一次提交  
+--  SELECT BMoney FROM TUser   --读取第一次更新的数据
+--  COMMIT TRANSACTION      --第二次提交失败 BMoney>0
+--END TRY
+--BEGIN CATCH
+--    IF @@TRANCOUNT>0
+--        ROLLBACK;
+--    THROW;
+--END CATCH
+
+--EXEC sp_lock

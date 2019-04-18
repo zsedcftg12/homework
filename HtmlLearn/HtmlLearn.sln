@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HtmlLearn", "HtmlLearn\HtmlLearn.csproj", "{D13137A7-88FB-4CA5-BD07-0FCA31F3C4AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "17bang", "HtmlLearn\17bang.csproj", "{D13137A7-88FB-4CA5-BD07-0FCA31F3C4AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7685ED3F-6C7B-4CFB-AE34-EE9500331ED1}"
+	ProjectSection(SolutionItems) = preProject
+		..\SQLhomework\SQL4-15.sql = ..\SQLhomework\SQL4-15.sql
+		..\SQLhomework\SQL4-17.sql = ..\SQLhomework\SQL4-17.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScript", "JavaScript\JavaScript.csproj", "{B02F1B9A-F128-4B35-84B4-8191B16EEA6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +23,10 @@ Global
 		{D13137A7-88FB-4CA5-BD07-0FCA31F3C4AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D13137A7-88FB-4CA5-BD07-0FCA31F3C4AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D13137A7-88FB-4CA5-BD07-0FCA31F3C4AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B02F1B9A-F128-4B35-84B4-8191B16EEA6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B02F1B9A-F128-4B35-84B4-8191B16EEA6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B02F1B9A-F128-4B35-84B4-8191B16EEA6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B02F1B9A-F128-4B35-84B4-8191B16EEA6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
