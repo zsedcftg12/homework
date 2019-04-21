@@ -15,6 +15,7 @@ alert(sum);
 
 //4-19日
 //1.使用JavaScript内置字符串函数，将 “‘源栈’：飞哥小班教学，线下免费收看” 变成：“大神"小"班教学，线上免费收看”。
+
 //2.将数组['why', 'gIT', 'vs2019', 'community', 'VERSION']规范化，所有字符串：
 //    (1).首字母大写开头，其他字母小写
 //    (2).截去超过6个字符的部分，如'community'将变成'Commun'
@@ -59,12 +60,24 @@ function getMaxNumber(arr) {
 
 //10.删除一个数组里面重复的元素
 function DeleteRepeated(arr) {
-    var arr = [1, 5, 7, 7, 61, 24, 43, 84, 31, 54, 54, 1, 1].sort();
+    var arr = [1, 5, 7, 7, 61, 24, 43, 84, 31, 54, 21, 54, "1", 1].sort();
     var Newarr = [];
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] !== Newarr[Newarr.length - 1]) {
             Newarr.push(arr[i]);
         }
     }
+    return arr
 }
+
+    var arr = [8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'];
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                arr.splice(i, 1)
+                i--
+            }
+        }
+    }
+
 //11.编写一个计算源栈返还红包金额的函数 Redbag() ，参考：
