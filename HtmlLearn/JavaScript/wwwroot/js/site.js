@@ -16,8 +16,7 @@
 ////4-19日
 ////1.使用JavaScript内置字符串函数，将 “‘源栈’：飞哥小班教学，线下免费收看” 变成：“大神"小"班教学，线上免费收看”。
 //var text = "“‘源栈’：飞哥小班教学，线下免费收看”";
-//text = text.replace(/飞哥/, "大神");
-//text = text.replace(/小/, '"小"');
+//text = text.replace(/飞哥/, "大神").replace(/小/, '"小"').replace(/下/, "上");
 //console.log(text);
 
 ////2.将数组['why', 'gIT', 'vs2019', 'community', 'VERSION']规范化，所有字符串：
@@ -33,18 +32,18 @@
 
 ////5.将源栈同学姓名 / 昵称装入数组，再根据该数组输出共有多少同学
 //var arr = ["老程", "芦苇", "文轩", "王枫", "明辉", "子祥", "老赵", "采苓"];
-//console.log(arr.length+"位同学");
+//console.log(arr.length + "位同学");
 
 ////6.在上述数组头部加上小雨老师，末尾加上大飞哥
 //var arr = ["LC", "LW", "XWZ", "LZ", "ZX", "WX", "WF", "MH", "CL"];
 //arr.unshift("小余老师");
 //arr.push("大飞哥");
-//console.log(arr)
+//console.log(arr);
 
 ////7.如果一个数只能被1和它自己整除，这个数就被称之为“素数”。请找出100以内的所有素数。然后封装成一个函数findPrime(max) ，可以返回max以内的所有素数。
-//function findPrime() {
+//function findPrime(max) {
 //    var arr = [];
-//    for (var i = 2; i <= arguments; i++) {
+//    for (var i = 2; i <= max; i++) {
 //        if (isPrime(i)) {
 //            arr.push(i);
 //        }
@@ -59,41 +58,80 @@
 //    }
 //    return true;
 //}
-//findPrime(100)
 ////8.建立一个函数getMaxNumber() ，可以接受任意多各种类型（整数、小数、正数、负数、字符串、布尔值等）的参数，并找出里面最大的数（忽略其他类型）
-//function getMaxNumber() {
+//function getMaxNumber(arr) {
 //    var max = 0;
-//    for (var i = 0; i < arguments.length; i++) {
-//        if (arguments[i] > max) {
-//            max = arguments[i];
+//    for (var i = 0; i < arr.length; i++) {
+//        if (arr[i] >= max && arr[i] !== "") {
+//            max = arr[i];
 //        }
 //    }
+//    return max;
 //}
-//getMaxNumber([1, 5, 7, 7, 61, 24, 43, 84, true, false, true, true, false])
-
-////9.创建一个函数getRandomArray(length, max) ，能返回一个长度不大于length，每个元素值不大于100随机整数数组。
+//9.创建一个函数getRandomArray(length, max) ，能返回一个长度不大于length，每个元素值不大于100随机整数数组。
+////--------------------------------------------------------
+//function getRandomArray(length, max) {                  //|
+//    var rool = (Math.random() * max).toFixed(length);   //|
+//    return rool;                                        //|
+//}                                                       //|
+////---------------------------------------------------已作废
+//function getRandomArray(length, max) {
+//    var arr = [];
+//    for (var i = 0; i < length; i++) {
+//        arr.push((Math.random() * max).toFixed(0));
+//    }
+//    return arr;
+//}
 
 ////10.删除一个数组里面重复的元素
-//function ToRepeated() {
-//    for (var i = 0; i < arguments.length; i++) {
-//        for (var j = i + 1; j < arguments.length; j++) {
-//            if (arguments[i] === arguments[j]) {
-//                arguments.splice(i, 1);
+//function ToRepeated(arr) {
+//    //var arr = [8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙']
+//    for (var i = 0; i < arr.length; i++) {
+//        for (var j = i + 1; j < arr.length; j++) {
+//            if (arr[i] === arr[j]) {
+//                arr.splice(i, 1);  //判断一旦外循环=内循环 删除外循环相同的值
 //                i--;
 //            }
 //        }
 //    }
+//    return arr;
 //}
-//ToRepeated([8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'])
-
 
 ////11.编写一个计算源栈返还红包金额的函数 Redbag() ，参考：
-//function myfunction(a = []) {
-//    var count = 0
-//    if (a[0] !== 0) {
-//        count = ((a[0] * 19.8) - 19.8) * (a[1] * 0.1)
+//function money(man, discount) {
+//    var count = 0;
+//    if (man !== 0) {
+//        count = ((man * 19.8) - 19.8) * (discount * 0.1);
 //    }
-//    console.log(count);
-//    return count
+//    else {
+//        alert("输入无效");
+//    }
+//    return count;
 //}
 
+////12.不使用JavaScript内置函数，将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
+//function reversal(text) {
+//    //var text = 'hello,yuanzhan';
+//    var k = "";
+//    for (var i = text.length - 1; i >= 0; i--) {
+//        k += text[i];
+//    }
+//    return k;
+//}
+
+////13.统计出这段文字中有多少个单词：
+////There are two ways to create a RegExp object: a literal notation and a constructor.To indicate strings, the parameters to the literal notation
+////do not use quotation marks while the parameters to the constructor function do use quotation - marks.So the following expressions create the same regular expression
+//var text = "There are two ways to create a RegExp object : a literal notation and a constructor. To indicate strings , the parameters to the literal notation do not use quotation marks while the parameters to the constructor function do use quotation-marks. So the following expressions create the same regular expression"
+//text = text.split(" ");
+//var k = 0;
+//for (var i = 1; i < text.length; i++) {
+//    if (text[i] === ":" || text[i] === "," || text[i] === ".") {
+
+//    }
+//    else {
+//        k += 1;
+//    }
+//}
+
+////14.在函数yz.fei.get986()中嵌入不带参数的函数has9() / has8() / has6() ，并调用上述函数，找出10000以内有多少个数字包含：9或者8或者6。
