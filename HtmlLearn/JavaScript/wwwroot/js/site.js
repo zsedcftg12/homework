@@ -98,16 +98,13 @@
 //}
 
 ////11.编写一个计算源栈返还红包金额的函数 Redbag() ，参考：
-//function money(man, discount) {
+//function money(name, discount, man) {
 //    var count = 0;
 //    if (man !== 0) {
 //        count = ((man * 19.8) - 19.8) * (discount * 0.1);
 //    }
-//    else {
-//        alert("输入无效");
-//    }
-//    return count;
-//}
+//    return name + "同学," + discount + "折本周共有" + man + "人应返金额" + count;
+}
 
 ////12.不使用JavaScript内置函数，将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
 //function reversal(text) {
