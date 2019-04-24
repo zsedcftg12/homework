@@ -104,7 +104,7 @@
 //        count = ((man * 19.8) - 19.8) * (discount * 0.1);
 //    }
 //    return name + "同学," + discount + "折本周共有" + man + "人应返金额" + count;
-}
+//}
 
 ////12.不使用JavaScript内置函数，将一个字符串顺序颠倒，比如：'hello,yuanzhan' 变成 'nahznauy,olleh'。
 //function reversal(text) {
@@ -117,18 +117,49 @@
 //}
 
 ////13.统计出这段文字中有多少个单词：
-////There are two ways to create a RegExp object: a literal notation and a constructor.To indicate strings, the parameters to the literal notation
-////do not use quotation marks while the parameters to the constructor function do use quotation - marks.So the following expressions create the same regular expression
+//There are two ways to create a RegExp object: a literal notation and a constructor.To indicate strings, the parameters to the literal notation
+//do not use quotation marks while the parameters to the constructor function do use quotation - marks.So the following expressions create the same regular expression
 //var text = "There are two ways to create a RegExp object : a literal notation and a constructor. To indicate strings , the parameters to the literal notation do not use quotation marks while the parameters to the constructor function do use quotation-marks. So the following expressions create the same regular expression"
 //text = text.split(" ");
 //var k = 0;
 //for (var i = 1; i < text.length; i++) {
 //    if (text[i] === ":" || text[i] === "," || text[i] === ".") {
-
 //    }
 //    else {
 //        k += 1;
 //    }
 //}
 
-////14.在函数yz.fei.get986()中嵌入不带参数的函数has9() / has8() / has6() ，并调用上述函数，找出10000以内有多少个数字包含：9或者8或者6。
+//14.在函数yz.fei.get986()中嵌入不带参数的函数has9() / has8() / has6() ，并调用上述函数，找出10000以内有多少个数字包含：9或者8或者6。
+//var yz = {};
+//yz.fei = {};
+//yz.fei.get986 = function (max) {
+//    function has9() {
+//        if (j.indexOf(9) !== -1) {
+//            return true;
+//        }
+//    }
+//    function has8() {
+//        if (j.indexOf(8) !== -1) {
+//            return true;
+//        }
+//    }
+//    function has6() {
+//        if (j.indexOf(6) !== -1) {
+//            return true;
+//        }
+//    }
+//    var k = 0;
+//    var i = 0;
+//    var j = 0;
+//    while (i < max) {
+//        i++;
+//        j = i.toString();
+//        if (has9() || has8() || has6()) {
+//            k += 1;
+//        }
+//    }
+//    return k;
+//}
+
+//15.在函数student()中声明了函数域变量name、age和female，使用闭包机制，将其暴露到函数外部
