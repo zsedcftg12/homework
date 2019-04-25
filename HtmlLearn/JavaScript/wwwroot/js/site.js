@@ -130,7 +130,7 @@
 //    }
 //}
 
-//14.在函数yz.fei.get986()中嵌入不带参数的函数has9() / has8() / has6() ，并调用上述函数，找出10000以内有多少个数字包含：9或者8或者6。
+////14.在函数yz.fei.get986()中嵌入不带参数的函数has9() / has8() / has6() ，并调用上述函数，找出10000以内有多少个数字包含：9或者8或者6。
 //var yz = {};
 //yz.fei = {};
 //yz.fei.get986 = function (max) {
@@ -162,4 +162,44 @@
 //    return k;
 //}
 
-//15.在函数student()中声明了函数域变量name、age和female，使用闭包机制，将其暴露到函数外部
+////15.在函数student()中声明了函数域变量name、age和female，使用闭包机制，将其暴露到函数外部
+//function student() {
+//    var sname = "小龙";
+//    var age = "18";
+//    var female = false;
+//    return function myfunction() {
+//        return sname + age + female;
+//    }
+//}
+//var information = student();
+
+////16.解释以下代码运行结果：（ condition ? <statement when true> : <statement when false>）
+//function foo(x) {
+//    var tmp = 3;   //3赋值给tmp
+//    return function (y) {  
+//        x = x ? x + 1 : 1;    //判断x x如果等于x那么x+1,不等于就把1赋值给x。-1 = -1所以-1 + 1 = 0，x = 0
+//        console.log(x + y + tmp);  //以上判断所以console.log(0 + 10 + 3 )
+//    }
+//}
+//var bar = foo(-1);  //传入参数-1给x
+////或者：var bar = foo(1);
+////或者：var bar = foo(0);
+//bar(10);  //传入参数10 给y
+
+////16.改动以下代码，让其输出如图所示，并说明理由。
+//function buildList(list) {
+//    var result = [];
+//    for (let i = 0; i < list.length; i++) {   
+//        (function () {
+//            result.push(console.log("item" + i + ":" + list[i])); 
+//        })()
+//    }
+//    return result;
+//}
+
+//(function () {
+//    var fnlist = buildList([1, 2, 3]);
+//    for (var i = 0; i < fnlist.length; i++) {
+//        fnlist[i]();  
+//    }
+//})();
