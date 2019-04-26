@@ -189,10 +189,10 @@
 ////16.改动以下代码，让其输出如图所示，并说明理由。
 //function buildList(list) {
 //    var result = [];
-//    for (let i = 0; i < list.length; i++) {   
-//        (function () {
-//            result.push(console.log("item" + i + ":" + list[i])); 
-//        })()
+//    for (let i = 0; i < list.length; i++) {
+//        result.push(function () {
+//            setTimeout('item' + i + ': ' + list[i], 1000)
+//        });
 //    }
 //    return result;
 //}
@@ -200,6 +200,67 @@
 //(function () {
 //    var fnlist = buildList([1, 2, 3]);
 //    for (var i = 0; i < fnlist.length; i++) {
-//        fnlist[i]();  
+//        fnlist[i]();
 //    }
 //})();
+
+//17.使用setTimeout() （不是setInterval() ）实现每隔1秒钟依次显示：第n周，源栈同学random人。（n逐次递增，random随机）
+//function circle() {
+//    var i = 0;
+//    function CircleShow() {
+//        i++;
+//        alert('第' + i + '周,源栈同学' + Math.round((Math.random()) * 100) + "人");
+//        setTimeout(CircleShow, 1000);
+//    }
+//    setTimeout(CircleShow, 1000);
+//}
+//circle();
+
+////18.完成猜数字的游戏：
+////  弹出游戏玩法说明，等待用户点击“确认”，开始游戏；
+////  浏览器生成一个不大于1000的随机正整数；
+////  用户输入猜测；
+////  如果用户没有猜对，浏览器比较后告知结果：“大了”或者“小了”。如果用户：
+////  只用了不到6次就猜到，弹出：碉堡了！
+////  只用了不到8次就猜到，弹出：666！
+////  用了8 - 10次猜到，弹出：猜到了。
+////  用了10次都还没猜对，弹出：^ (*￣(oo) ￣)^
+//alert("游戏玩法：系统将会随机生成一个不大于1000的数字。\n请在输入框内输入不大于1000的数字。\n您一共有十次猜测机会^-^。\n点击确认开始游戏！");
+//var eventuate = Math.round((Math.random()) * 1000),
+//    times = 0;
+//while (input !== eventuate) {
+//    var input = +prompt("您已猜测" + times + "次" + eventuate);
+//    if (times >= 10) {
+//        alert("^ (*￣(oo) ￣)^ ")
+//        break;
+//    } else if (input === 0) {
+//        alert("您已取消");
+//        break;
+//    } else if (typeof input === "number" && input < 1000 && input > 0) {
+//        compare(input);
+//    } else {
+//        alert("去找老程领巴掌！");
+//        times--;
+//    }
+//    times++;
+//}
+
+//function compare(input) {
+//    if (input < eventuate) {
+//        return alert("太小了！！");
+//    } else if (input > eventuate) {
+//        return alert("太大了！！");
+//    } else {
+//        return ofnumber(times);
+//    }
+//}
+
+//function ofnumber(times) {
+//    if (times <= 6) {
+//        return alert("碉堡了!");
+//    } else if (times <= 8) {
+//        return alert("666");
+//    } else if (times >= 9) {
+//        return alert("猜到了");
+//    }
+//}
