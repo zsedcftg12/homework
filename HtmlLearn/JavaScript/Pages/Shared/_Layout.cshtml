@@ -1,16 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <script src="~/js/site.js"></script>
 </head>
 <body>
+    <span class="glyphicon glyphicon-heart" style="color:gray"></span>
     <form>
         <label>用户名：<input type="text" name="username" /></label><br />
         <label>密码：<input type="password" name="password" /></label><br />
         <label>确认密码：<input type="password" /></label><br />
         <div>
             <label>性别：</label>
-            <label><input type="radio" value="female" name="gender" />男</label>
+            <label><input type="radio" value="man" name="gender" />男</label>
             <label><input type="radio" value="female" name="gender" />女</label>
         </div>
         <div>
@@ -22,6 +24,10 @@
             </select>
         </div>
         <div>
+            <label>生日：<input type="text" name="birthday" placeholder="列如：2019-04-27" /></label>
+            <label>关键字：<input type="text" name="keyword" placeholder="自定义关键字标签" /></label>
+        </div>
+        <div>
             <label>自我介绍：</label><br />
             <textarea name="self-introduction"></textarea>
         </div>
@@ -30,7 +36,51 @@
         <label><input type="checkbox" id="remember" />记住我</label>
     </form>
     <script>
+
+        //2.参考用户注册页面，创建一下函数：
+        //显示密码的长度
+        //如果密码和确认密码不一致，弹出提示
+        //参考用户资料页面，控制台显示出用户的：性别 / 出生年月 / 关注（关键字）/ 自我介绍
+        document.getElementsByTagName("input")[7].onclick = function () {
+            if (document.getElementsByName("password")[0].value !== document.getElementsByTagName("input")[2].value) {
+                alert("两次输入的密码不同,请重新输入！！");
+            } else {
+                UserDatum()
+                //提交表单函数
+            }
+        }
+        function UserDatum() {
+            alert("用户名：" + document.getElementsByTagName("input")[0].value + "\n密码：" + document.getElementsByTagName("input")[1].value
+                + "\n确认密码:" + document.getElementsByTagName("input")[2].value + "\n性别：" + GetGender() + "\n地区:" + GetArea() + "\n生日:" +
+                document.getElementsByTagName("input")[5].value + "\n关键字:" + document.getElementsByTagName("input")[6].value + "\n自我介绍:" +
+                document.getElementsByTagName("textarea")[0].value + "\n密码长度：" + console.log(document.getElementsByName("password")[0].value.length))
+        }
+        function GetArea() {
+            let area = ""
+            if (document.getElementsByTagName("select")[0].value === "js") {
+                area = "江苏"
+            } else if (document.getElementsByTagName("select")[0].value === "hn") {
+                area = "湖南"
+            } else if (document.getElementsByTagName("select")[0].value === "hlj") {
+                area = "黑龙江"
+            }
+            return area
+        }
+        function GetGender() {
+            var gender = ""
+            if (document.getElementsByTagName("input")[3].checked === true) {
+                gender = "男"
+            } else {
+                gender = "女"
+            }
+            if (document.getElementsByTagName("input")[4].checked === true) {
+                gender = "女"
+            } else {
+                gender = "男"
+            }
+            return gender
         
+
 
     </script>
     @RenderBody()

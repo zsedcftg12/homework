@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="~/css/site.css" />
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="~/images/17bang.ico" />
+
     <title>28岁，转行学 IT 靠谱吗？ </title>
 </head>
 <body>
@@ -17,6 +18,7 @@
                 <p class="navbar-text pull-left">
                     <span style="font-size:18px; font-weight:600;">一起帮</span>
                     <span class="visible-md-inline visible-lg-inline">·网络互助平台</span>
+                    <span class="glyphicon glyphicon-heart" style="color:gray"></span>
                 </p>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -137,5 +139,19 @@
             </p>
         </div>
     </footer>
+    <script>
+        //1.实现铃铛（没有学bootstrap的同学用文字代替）闪烁效果
+        function CirculateTwinkle() {
+            var love = document.getElementsByTagName("span")[2]
+            if (love.style.color === "gray") {
+                love.style.color = "red";
+            } else if (love.style.color === "red") {
+                love.style.color = "gray";
+            }
+        }
+        setInterval(CirculateTwinkle, 500)
+    </script>
+    <script src="~/js/DOM.js"></script>
+    <script src="~/js/事件.js"></script>
 </body>
 </html>
