@@ -1,116 +1,334 @@
 ﻿@page
-    <main>
-        <div class="container-width">
-            <div class="col-md-9">
-                <h2 class="page-header">
+<main>
+    <div class="container-width">
+        <div class="col-md-9">
+            <h2 class="page-header">
                 <span class=" glyphicon glyphicon-question-sign "></span>
-                我要求助</h2>
-                <div class="info-border">
-                    <p>
-                        这是你第一次发布求助，求助发布成功系统会奖励你 20
-                        <a href="#"><span class=" glyphicon glyphicon-leaf "></span>
-                        帮帮点</a>
-                    </p>
-                    <p>
-                        你还没有<a href="#">自由发布权限</a>，为了保证求助的质量，我们会帮助你检查完善该求助内容，然后再公开显示，请耐心等待。
-                        <br />
-                        中途如有任何问题，工作人员会主动和你联系，请注意保持联系方式畅通。
-                    </p>
-                </div>
-                <form>
-                    <div class="gap">
-                        <div class="checkbox pull-right" style="margin:0px;">
-                            <label><input type="checkbox" value="true" />需要远程结算</label>
-                        </div>
-                    </div>
-                    <div class="gap">
-                        <label>标题：（*必填）</label>
-                        <input type="text" class="form-control" placeholder="简明扼要，不超过255字" aria-describedby="basic-addon1" />
-                    </div>
-                    <div class="gap">
-                        <label>说明：（*必填）</label>
-                        <input type="text" class="form-control" style="width:100%;height:384px;"/>
-                    </div>
-                    <div class="gap">
-                        <label>关键字：（*使用空格分隔）</label>
-                        <div class="input-group">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="button">---1级---</button>
-                                <button class="btn btn-default" type="button">---2级---</button>
-                            </div>
-                            <input type="text" class="form-control" placeholder="自定义关键字，使用空格分隔" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <div class="gap">
-                        <label>定向求助：（
-                        <a href="#">推荐
-                            <span class="glyphicon glyphicon-question-sign"></span>
-                            </a>）</label>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">@@</span>
-                            <input type="text" class="form-control" placeholder="输入你想要求助的大神用户名" aria-describedby="basic-addon1">
-                        </div>
-                    </div>
-                    <div class="gap">
-                        <div class="checkbox pull-right" style="margin:0px;">
-                            <label><input type="checkbox" value="true" />据实结算</label>
-                        </div>
-                        <div>
-                            <label>
-                                悬赏
-                                <a href="#" style="color:#cbb41a">帮帮币：</a>
-                                （<a href="#">现有0枚</a>
-                                <span class="glyphicon glyphicon-refresh"></span>
-                                ）
-                            </label>
-                        </div>
-                        <div class="input-group">
-                            <span class="input-group-addon" id="basic-addon1">$</span>
-                            <input type="text" class="form-control" placeholder="正整数，建议10枚以上" aria-describedby="basic-addon1">
-                            <span class="input-group-addon">枚</span>
-                        </div>
-                        <div>
-                            <a class="pull-right" href="#">
-                            <span class="glyphicon glyphicon-question-sign"></span>
-                            如何获得帮帮币</a>
-                        </div>
-                    </div>
-                    <div class="gap">
-                        <input class="btn btn-primary" type="submit" value="发布" />
-                        <button class="btn btn-default" type="button">保存</button>
-                    </div>
-                    <hr />
-                </form>
+                我要求助
+            </h2>
+            <div class="info-border">
+                <p>
+                    这是你第一次发布求助，求助发布成功系统会奖励你 20
+                    <a href="#">
+                        <span class=" glyphicon glyphicon-leaf "></span>
+                        帮帮点
+                    </a>
+                </p>
+                <p>
+                    你还没有<a href="#">自由发布权限</a>，为了保证求助的质量，我们会帮助你检查完善该求助内容，然后再公开显示，请耐心等待。
+                    <br />
+                    中途如有任何问题，工作人员会主动和你联系，请注意保持联系方式畅通。
+                </p>
             </div>
-            <div class="col-md-3" style="margin-top:50px;">
-                <div class="task-border">
-                    <h4><span class="glyphicon glyphicon-list"></span>新手任务</h4>
-                    <hr />
-                    <p>填写：<a href="#">联系方式</a></p>
-                    <p>激活：<a href="#">Email</a></p>
-                    <p>邀请：<a href="#">邀请我的小伙伴</a></p>
-                    <p>参加：<a href="#">新人测试</a></p>
-                    <p>发布：<a href="#">第一个求助</a></p>
-                    <p>尝试：<a href="#">第一次求助</a></p>
-                    <p>获得：若干<a href="#" style="color:#cbb41a">帮帮币</a></p>
-                </div>
-                <a href="#" class="btn pull-right">
-                <span class=" glyphicon glyphicon-edit "></span>
-                修改</a>
-                <div id="profile-no-picture" class="img-responsive img-thumbnail">
-                    <span id="camera" class="glyphicon glyphicon-picture "></span>
-                    <div>
-                        等待上传中
-                        <span class=" glyphicon glyphicon-hourglass "></span>
-                        。。。
+            <form>
+                <div class="gap">
+                    <div class="checkbox pull-right" style="margin:0px;">
+                        <label><input type="checkbox" value="true" />需要远程结算</label>
                     </div>
                 </div>
                 <div class="gap">
-                    用户：
-                    <a href="#">小王子真帅</a>
-                    <a href="#">①</a>
-                    <a href="#" class="pull-right"><span class="glyphicon glyphicon-edit"></span>修改</a>
+                    <label>标题：（*必填）</label>
+                    <input type="text" class="form-control" placeholder="简明扼要，不超过255字" aria-describedby="basic-addon1" />
+                </div>
+                <div class="gap">
+                    <label>说明：（*必填）</label>
+                    <input type="text" class="form-control" style="width:100%;height:384px;" />
+                </div>
+                <div class="gap">
+                    <label>关键字：（*使用空格分隔）</label>
+                    <div style="padding-bottom:3px;">
+                        <div class="badge" style="margin-right:5px;display:none">
+                            <span>
+                                编程开发语言<span class="glyphicon glyphicon-remove-sign"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" type="button">---1级---</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#" data-used="1">编程开发语言</a></li>
+                                <li><a href="#" data-used="2">工具软件</a></li>
+                                <li><a href="#" data-used="3">顾问咨询</a></li>
+                                <li><a href="#" data-used="4">操作系统</a></li>
+                            </ul>
+                        </div>
+                        <div class="input-group-btn ">
+                            <button class="btn btn-default" type="button">---2级---</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+                                <span class="caret"></span>
+                            </button>
+                            <ul data-used="01" style="display:none;" class="dropdown-menu">
+                                <li><a href="#" >"c#"</a></li>
+                                <li><a href="#" >JAVA</a></li>
+                                <li><a href="#" >Javascript</a></li>
+                                <li><a href="#" >html</a></li>
+                                <li><a href="#" >SQL</a></li>
+                                <li><a href="#" >Python</a></li>
+                                <li><a href="#" >CSS</a></li>
+                                <li><a href="#" >PHP</a></li>
+                                <li><a href="#" >C++</a></li>
+                                <li><a href="#" >C</a></li>
+                            </ul>
+                            <ul class="dropdown-menu" style="display:none"  zyf-keyword-dropdownlist="1">
+                                <li><a href="#" >VisualStudio</a></li>
+                                <li><a href="#" >eclipse</a></li>
+                                <li><a href="#" >IDEA</a></li>
+                                <li><a href="#" >Excel</a></li>
+                                <li><a href="#" >Word</a></li>
+                                <li><a href="#" >CAD</a></li>
+                                <li><a href="#" >Photoshop</a></li>
+                                <li><a href="#" >PowerPoint</a></li>
+                            </ul>
+                            <ul  class="dropdown-menu" style="display:none" zyf-keyword-dropdownlist="1">
+                                <li><a href="#" >职场</a></li>
+                                <li><a href="#" >法律</a></li>
+                                <li><a href="#" >财务</a></li>
+                                <li><a href="#" >心理</a></li>
+                                <li><a href="#" >亲子</a></li>
+                                <li><a href="#" >婚姻家庭</a></li>
+                            </ul>
+                            <ul class="dropdown-menu" style="display:none" zyf-keyword-dropdownlist="1">
+                                <li><a href="#" >Linux</a></li>
+                                <li><a href="#" >Windows</a></li>
+                                <li><a href="#" >Android</a></li>
+                                <li><a href="#" >Unix</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" class="form-control" placeholder="自定义关键字，使用空格分隔" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="gap">
+                    <label>
+                        定向求助：（
+                        <a href="#">
+                            推荐
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                        </a>）
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">@@</span>
+                        <input type="text" class="form-control" placeholder="输入你想要求助的大神用户名" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+                <div class="gap">
+                    <div class="checkbox pull-right" style="margin:0px;">
+                        <label><input type="checkbox" value="true" />据实结算</label>
+                    </div>
+                    <div>
+                        <label>
+                            悬赏
+                            <a href="#" style="color:#cbb41a">帮帮币：</a>
+                            （<a href="#">现有0枚</a>
+                            <span class="glyphicon glyphicon-refresh"></span>
+                            ）
+                        </label>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon" id="basic-addon1">$</span>
+                        <input type="text" class="form-control" placeholder="正整数，建议10枚以上" aria-describedby="basic-addon1">
+                        <span class="input-group-addon">枚</span>
+                    </div>
+                    <div>
+                        <a class="pull-right" href="#">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                            如何获得帮帮币
+                        </a>
+                    </div>
+                </div>
+                <div class="gap">
+                    <input class="btn btn-primary" type="submit" value="发布" />
+                    <button class="btn btn-default" type="button">保存</button>
+                </div>
+                <hr />
+            </form>
+        </div>
+        <div class="col-md-3" style="margin-top:50px;">
+            <div class="task-border">
+                <h4><span class="glyphicon glyphicon-list"></span>新手任务</h4>
+                <hr />
+                <p>填写：<a href="#">联系方式</a></p>
+                <p>激活：<a href="#">Email</a></p>
+                <p>邀请：<a href="#">邀请我的小伙伴</a></p>
+                <p>参加：<a href="#">新人测试</a></p>
+                <p>发布：<a href="#">第一个求助</a></p>
+                <p>尝试：<a href="#">第一次求助</a></p>
+                <p>获得：若干<a href="#" style="color:#cbb41a">帮帮币</a></p>
+            </div>
+            <a href="#" class="btn pull-right">
+                <span class=" glyphicon glyphicon-edit "></span>
+                修改
+            </a>
+            <div id="profile-no-picture" class="img-responsive img-thumbnail">
+                <span id="camera" class="glyphicon glyphicon-picture "></span>
+                <div>
+                    等待上传中
+                    <span class=" glyphicon glyphicon-hourglass "></span>
+                    。。。
                 </div>
             </div>
+            <div class="gap">
+                用户：
+                <a href="#">小王子真帅</a>
+                <a href="#">①</a>
+                <a href="#" class="pull-right"><span class="glyphicon glyphicon-edit"></span>修改</a>
+            </div>
         </div>
-    </main>
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<div name="badge" style="padding-bottom:3px;">
+        <div>
+            <span class="badge" name="01" style="margin-right:5px;display:none;">
+                "编程开发语言"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0101" style="margin-right:5px;">
+                "c#"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0102" style="margin-right:5px;">
+                "JAVA"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0103" style="margin-right:5px;">
+                "javascript"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0104" style="margin-right:5px;">
+                "html"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0105" style="margin-right:5px;">
+                "SQL"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0106" style="margin-right:5px;">
+                "Python"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0107" style="margin-right:5px;">
+                "CSS"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0108" style="margin-right:5px;">
+                "PHP"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0109" style="margin-right:5px;">
+                "C++"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0110" style="margin-right:5px;">
+                "C"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+        </div>
+        <div>
+            <span class="badge" name="02" style="margin-right:5px;display:none;">
+                "工具软件"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0201" style="margin-right:5px;">
+                "VisualStudio"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0202" style="margin-right:5px;">
+                "eclipse"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0203" style="margin-right:5px;">
+                "IDEA"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0204" style="margin-right:5px;">
+                "Excel"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0205" style="margin-right:5px;">
+                "word"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0206" style="margin-right:5px;">
+                "CAD"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0207" style="margin-right:5px;">
+                "Photoshop"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0208" style="margin-right:5px;">
+                "PowerPoint"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+        </div>
+        <div>
+            <span class="badge" name="03" style="margin-right:5px;">
+                "顾问咨询"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0301" style="margin-right:5px;">
+                "职场"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0302" style="margin-right:5px;">
+                "法律"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0303" style="margin-right:5px;">
+                "财务"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0304" style="margin-right:5px;">
+                "心理"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0305" style="margin-right:5px;">
+                "亲子"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0306" style="margin-right:5px;">
+                "婚姻家庭"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+        </div>
+        <div>
+            <span class="badge" name="04" style="margin-right:5px;">
+                "操作系统"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0401" style="margin-right:5px;">
+                "Linux"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0402" style="margin-right:5px;">
+                "Windows"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0403" style="margin-right:5px;">
+                "Android"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+            <span class="badge" name="0404" style="margin-right:5px;">
+                "Unix"
+                <span class="glyphicon glyphicon-remove-sign"></span>
+            </span>
+        </div>
+    </div>*@

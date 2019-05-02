@@ -9,8 +9,8 @@
 ////2.参考文章的全系列阅读功能，当滚动到页面底部时，将页面现有内容粘贴到页面底部，直到5次过后，在页面底部显示：已经没有更多内容了
 ////3.参考消息页面：完成勾选全选功能
 
-//var a = document.getElementsByName("filter")[0].getElementsByTagName("input")
-//    a[2].onclick = function () {
+//var a = document.getElementsByName("filter")[0].getElementsByTagName("input")  //所有的框
+//    a[2].onclick = function () {  //全选框
 //        for (var i = 0; i < a.length; i++) {
 //            a[i].checked = a[2].checked
 //        }
@@ -23,7 +23,7 @@
 
 //var arr = ["laocheng", "laozhao", "wenxuan"];
 //var User = document.getElementsByTagName("input")[2];
-//document.getElementsByTagName("input")[6].onclick = function (event) {
+//document.getElementsByTagName("input")[6].onsubmit = function (event) {
 //    for (var i = 0; i < arr.length; i++) {
 //        if (this.value === arr[i]) {
 //            event.preventDefault(); //阻止form提交
@@ -64,8 +64,8 @@
 //    } else if (list.value === "2") {
 //        ad[7].value = "c#天下第一，JAVA就是弟弟"
 //        ad[8].value = "https://http://17bang.ren/Problem"
-//        ad[7].readOnly = " readonly"
-//        ad[8].readOnly = " readonly"
+//        ad[7].readOnly = "readonly"
+//        ad[8].readOnly = "readonly"
 //    } else {
 //        ad[7].value = ""
 //        ad[8].value = ""
@@ -74,9 +74,124 @@
 //    }
 //}
 
-//6.参考发布求助，实现其关键字功能：
-//(1.)没有选择一级关键字，不能选择二级关键字
-//(2.)选择一级关键字后，二级关键字只能是一级关键字下的子集
-//(3.)一级关键字和二级关键字被选中后，会显示在下拉列表上方
-//(4.)自定义关键字输入完成后（按空格键），输入的关键字显示在下拉列表上方
-//(5.)后输入的关键字显示在前面
+////6.参考发布求助，实现其关键字功能：
+////(1.)没有选择一级关键字，不能选择二级关键字
+////(2.)选择一级关键字后，二级关键字只能是一级关键字下的子集
+////(3.)一级关键字和二级关键字被选中后，会显示在下拉列表上方
+////(4.)自定义关键字输入完成后（按空格键），输入的关键字显示在下拉列表上方
+////(5.)后输入的关键字显示在前面
+var DownMenu = document.getElementsByClassName("input-group")[0].getElementsByClassName("dropdown-toggle")
+//一级关键字下拉栏
+var Spread = document.getElementsByClassName("input-group-btn")
+//二级关键字下拉栏
+var oneKeyWord = document.getElementsByClassName("dropdown-menu")[0].getElementsByTagName("a")
+//一级关键字
+var twoKeyWord = document.getElementsByClassName("input-group-btn")[1].getElementsByTagName("a")
+//二级关键字
+DownMenu[0].onclick = function () {
+    if (Spread[0].className === "input-group-btn") {
+        Spread[0].classList = "input-group-btn open"
+    } else {
+        Spread[0].classList = "input-group-btn"
+    }
+}//一级关键字下拉栏显示
+DownMenu[1].onclick = function () {
+    if (Spread[1].className === "input-group-btn") {
+        Spread[1].classList = "input-group-btn open"
+    } else {
+        Spread[1].classList = "input-group-btn"
+    }
+}//二级关键字下拉栏显示
+
+for (let i = 0; i < oneKeyWord.length; i++) {
+    oneKeyWord[i].onclick = function (event) {
+        //一级关键字点击事件
+        event.preventDefault()
+        //分割
+        let div = document.createElement("div")
+        div.setAttribute("class", "badge")
+        div.style.marginRight = "15px"
+        document.getElementsByClassName("gap")[3].getElementsByTagName("label")[0].nextElementSibling.append(div)
+        let span = document.createElement("span")
+        div.appendChild(span)
+        let text = document.createTextNode(this.outerText)
+        span.appendChild(text)
+        let badge = document.createElement("span")
+        badge.setAttribute("class", "glyphicon glyphicon-remove-sign")
+        span.appendChild(badge)
+        //点击在下拉列表上方显示
+        for (let i = 0; i < oneKeyWord.length; i++) {
+            document.querySelectorAll("ul.dropdown-menu")[i + 1].style.display = "none"
+        }
+        let k = +this.getAttribute('data-used')
+        document.querySelectorAll("ul.dropdown-menu")[k].removeAttribute("style")
+    }   //判断点击事件显示二级关键字
+}
+
+for (let i = 0; i < twoKeyWord.length; i++) {
+    twoKeyWord[i].onclick = function (event) {
+        event.preventDefault()
+        //二级关键字点击在下拉列表上方显示
+        let div = document.createElement("div")
+        div.setAttribute("class", "badge")
+        div.style.marginRight = "15px"
+        document.getElementsByClassName("gap")[3].getElementsByTagName("label")[0].nextElementSibling.append(div)
+        let span = document.createElement("span")
+        div.appendChild(span)
+        let text = document.createTextNode(this.outerText)
+        span.appendChild(text)
+        let badge = document.createElement("span")
+        badge.setAttribute("class", "glyphicon glyphicon-remove-sign")
+        span.appendChild(badge)
+    }
+}
+
+document.getElementsByClassName("form-control")[2].onkeydown = function (event) {
+    if (event.keyCode == 32 || event.keyCode == 13) {
+        //判断键盘按下的键32是空格，13是回车
+        let div = document.createElement("div")
+        div.setAttribute("class", "badge")
+        div.style.marginRight = "15px"
+        let first = document.getElementsByClassName("gap")[3].getElementsByTagName("div")[0].firstElementChild
+        //获取第一个元素
+        document.getElementsByClassName("gap")[3].getElementsByTagName("label")[0].nextElementSibling.insertBefore(div,first)
+        //把添加的元素始终丢前面
+        let span = document.createElement("span")
+        div.appendChild(span)
+        let text = document.createTextNode(this.value)
+        span.appendChild(text)
+        let badge = document.createElement("span")
+        badge.setAttribute("class", "glyphicon glyphicon-remove-sign")
+        span.appendChild(badge)
+    }
+}
+
+
+
+
+
+
+//for (var i = 0; i < KeyWord.length; i++) {
+//    KeyWord[i].onclick = function (event) {
+//        event.preventDefault()
+//        var j = this.getAttribute('data-used')
+//        document.getElementsByName(j)[0].style.display = "inline-block"
+//    }
+//}
+//for (var i = 0; i < KeyWord1.length; i++) {
+//    KeyWord1[i].onclick = function (event) {
+//        event.preventDefault()
+//        var k = this.getAttribute('data-used')
+//        document.getElementsByName(k)[0].style.display = "inline-block"
+//    }
+//}
+
+
+
+
+
+
+
+
+//二级关键字展开 的ul表怎么搞
+
