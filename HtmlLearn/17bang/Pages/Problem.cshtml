@@ -533,6 +533,7 @@
                     <li><a href="#"> 本站主机由西部数码提供 </a></li>
                 </ol>
             </div>
+            @*作业*@
             <div>
                 <h3>之前使用的广告</h3>
                 <select style="margin-bottom:20px">
@@ -547,7 +548,30 @@
                     <input class="form-control" type="text" value="" placeholder="http或者https开头的网址" />
                 </div>
             </div>
-            @* 上面那个div是下面作业临时加的 *@
+            <div id="DateTime-Calculator">
+                <div>
+                    <h2>学费计算器（Web版）</h2>
+                    <input class="form-control" type="date" value="" placeholder="请输入开始学习的年/月/天"style="margin-bottom: 20px;" />
+                    请选择学习的时长按月/周/天填写
+                </div>
+                <div style="margin-bottom:20px;">
+                    <label class="checkbox-inline"><input type="radio" value="月" name="time" />月</label>
+                    <label class="checkbox-inline"><input type="radio" value="周" name="time" />周</label>
+                    <label class="checkbox-inline"><input type="radio" value="天" name="time" />天</label>
+                </div>
+                <div>
+                    <input class="form-control" value="" style="width:50%;display:inline-block" placeholder="您要学习的月/周/天数。" type="text"/>
+                    <input class="btn btn-primary" type="submit" value="计算"/>
+                </div>
+                <div style="color:red">
+                    您一共学习:<span class="h3"> </span><br />
+                    开始学习的时间:<span class="h3"> </span><br />
+                    截至日期:<span class="h3"> </span><br />
+                    学费共计(请以实际费用为准):<span class="h3"> </span><br />
+                </div>
+            </div>
+            @* 上面div是下面作业临时加的 *@
         </div>
     </div>
 </main>
+

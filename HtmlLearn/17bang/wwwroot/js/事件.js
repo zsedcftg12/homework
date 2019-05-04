@@ -167,15 +167,17 @@
 //}
 
 
-//document.body.onscroll = function () {
-//    var height = document.body.clientHeight
-//    var ContentHeight = document.body.offsetHeight
-//    var scroll = document.body.scrollTop
-//    var body = document.body.innerHTML
-//    if (scroll === (ContentHeight - height)) {
-//        document.getElementsByTagName("main")[0].nextElementSibling.append(body);
-//    }
-//}
-////滚动条下拉！！！！！！！！
+document.body.onscroll = function () {
+    var height = document.documentElement.clientHeight
+    var ContentHeight = document.documentElement.offsetHeight
+    var scroll = document.documentElement.scrollTop
+    var a = Math.ceil(scroll)
+    var page = document.body
+    var ClonePage = page.cloneNode(true)
+    if (a === ContentHeight - height) {
+        document.body.append(ClonePage)
+    }
+}
+//滚动条下拉！！！！！！！！
 
 

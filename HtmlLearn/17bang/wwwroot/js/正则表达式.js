@@ -2,6 +2,97 @@
 //(1.)用户可以选择在源栈学习的开始时间、共学习多少天 / 周 / 月
 //(2.)然后，系统自动计算出截至日期和总学费
 
+document.querySelectorAll("input.btn-primary")[0].onclick = function () {
+    var time = document.getElementsByClassName("form-control")[3].value,
+        //起始日期
+        count = document.getElementsByClassName("form-control")[4].value,
+        //学习的月/周/天数
+        month = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("input")[1].checked,
+        //月份
+        week = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("input")[2].checked,
+        //周
+        day = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("input")[3].checked,
+        //天
+        StopDate = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("span");
+    //得出的结果
+
+    if (month) {
+        StopDate[2].childNodes[0].nodeValue = CountDateMonth(time, count);
+        StopDate[1].childNodes[0].nodeValue = time;
+        StopDate[0].childNodes[0].nodeValue = count + "月";
+        StopDate[3].childNodes[0].nodeValue = StudyCostMonth(count) + "元";
+    } else {
+
+    }
+    if (week) {
+        StopDate[2].childNodes[0].nodeValue = CountDateWeek(time, count);
+        StopDate[1].childNodes[0].nodeValue = time;
+        StopDate[0].childNodes[0].nodeValue = count + "周";
+        StopDate[3].childNodes[0].nodeValue = StudyCostWeek(count) + "元";
+    } else {
+
+    }
+    if (day) {
+        StopDate[2].childNodes[0].nodeValue = CountDateDay(time, count);
+        StopDate[1].childNodes[0].nodeValue = time;
+        StopDate[0].childNodes[0].nodeValue = count + "天";
+        StopDate[3].childNodes[0].nodeValue = StudyCostDay(count) + "元";
+    }
+}
+
+//////////////计算月份的函数
+function CountDateMonth(time, count) {
+    //计算月份
+    var BigMonth = 30;
+    var K = +time.substring(7, 5);
+    if (K === 1 || K === 3 || K === 5 || K === 7 || K === 8 || K === 10 || K === 12) {
+        BigMonth = 31;
+    } else if (count === 2) {
+        var Year = time.substring(4, 0);
+        if (+ Year % 4 === 0) {
+            BigMonth = 29;
+        } else {
+            BigMonth = 28;
+        }
+        //以上判断大小月份和闰年2月
+    }
+    let a = new Date(time);
+    a = a.valueOf();
+    a = a + count * BigMonth * 24 * 60 * 60 * 1000;
+    a = new Date(a);
+    return a.getFullYear() + "年" + (a.getMonth() + 1) + "月" + a.getDate() + "日";
+}
+function StudyCostMonth(count) {
+    return Math.floor(count * 30 * (998 / 7));
+    //取整计算学费
+}
+///////////////////////////////////
+function CountDateWeek(time, count) {
+    //计算一周的时间
+    let a = new Date(time);
+    a = a.valueOf();
+    a = a + count * 7 * 24 * 60 * 60 * 1000;
+    a = new Date(a);
+    return a.getFullYear() + "年" + (a.getMonth() + 1) + "月" + a.getDate() + "日";
+}
+function StudyCostWeek(count) {
+    return Math.floor(count * 7 * (998 / 7));
+    //取整计算学费
+}
+////////////////////////////////////
+function CountDateDay(time, count) {
+    //计算一天的时间
+    let a = new Date(time);
+    a = a.valueOf();
+    a = a + count * 24 * 60 * 60 * 1000;
+    a = new Date(a);
+    return a.getFullYear() + "年" + (a.getMonth() + 1) + "月" + a.getDate() + "日";
+}
+function StudyCostDay(count) {
+    return Math.floor(count * 1 * (998 / 7));
+    //取整计算学费
+}
+
 
 
 
@@ -15,11 +106,16 @@
 //console.log(pattern.test(str));
 
 
-//var pattern = /(^[0-9]*)\.*([0-9]*$)/,
-//    str = "156148651456.156156"
-//console.log(pattern.test(str))
+//var pattern = /(^[0-9]*)\..([0-9]*$)/g,
+//str = "156148651456.156156";
+//console.log(pattern.test(str));
 
-//^zyf\-*
+//var body = document.querySelectorAll("#DateTime-Calculator")[0].innerHTML
+//        pattern = /^zyf\-*/g;
+//    body = body.replace(pattern, function (match, content) {
+//        return match.replace(content,"0123");
+//    })
+
 
 
 //3.JSON生成和解析：
@@ -31,12 +127,13 @@
 //    name: "小程",
 //    QQname: "老程",
 //    age: 41,
-//    gender: "女",
+//gender: "女",
 //    hobby: "blackmail,cheat,thief",
-//    introduction:"Never Mind the Scandal and Liber"
+//    introduction: "Never Mind the Scandal and Liber";
 //}
 //console.log(JSON.stringify(XiaoCheng, function (key, value) {
-//    return value
+//    return value;
 //}))
 
-var lw = JSON.parse('{ "name": "小程", "QQname": "老程", "age": 41, "gender": "女", "hobby": "blackmail,cheat,thief", "introduction": "Never Mind the Scandal and Liber" }')
+//var lw = JSON.parse('{ "name": "小程", "QQname": "老程", "age": 41, "gender": "女", "hobby": "blackmail,cheat,thief", "introduction": "Never Mind the Scandal and Liber" }')
+
