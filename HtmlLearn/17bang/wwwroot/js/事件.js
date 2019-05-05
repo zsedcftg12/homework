@@ -166,18 +166,19 @@
 //    }
 //}
 
-
+var h = 0;
+var height = document.documentElement.clientHeight;
+var ContentHeight = document.documentElement.offsetHeight;
+var scroll = document.documentElement.scrollTop;
+var a = Math.ceil(scroll);
+var page = document.body;
+var ClonePage = page.cloneNode(true);
 document.body.onscroll = function () {
-    var height = document.documentElement.clientHeight
-    var ContentHeight = document.documentElement.offsetHeight
-    var scroll = document.documentElement.scrollTop
-    var a = Math.ceil(scroll)
-    var page = document.body
-    var ClonePage = page.cloneNode(true)
-    if (a === ContentHeight - height) {
-        document.body.append(ClonePage)
+    if (a === ContentHeight - height && h < 5) {
+        document.body.append(ClonePage);
+        h += 1;
+        }  
     }
-}
 //滚动条下拉！！！！！！！！
 
 
