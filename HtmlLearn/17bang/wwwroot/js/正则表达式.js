@@ -66,7 +66,7 @@ function StudyCostMonth(count) {
     return Math.floor(count * 30 * (998 / 7));
     //取整计算学费
 }
-///////////////////////////////////
+
 function CountDateWeek(time, count) {
     //计算一周的时间
     let a = new Date(time);
@@ -79,7 +79,7 @@ function StudyCostWeek(count) {
     return Math.floor(count * 7 * (998 / 7));
     //取整计算学费
 }
-////////////////////////////////////
+
 function CountDateDay(time, count) {
     //计算一天的时间
     let a = new Date(time);
