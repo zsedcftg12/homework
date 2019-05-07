@@ -3,40 +3,36 @@
 //(2.)然后，系统自动计算出截至日期和总学费
 
 document.querySelectorAll("input.btn-primary")[0].onclick = function () {
-    var time = document.getElementsByClassName("form-control")[3].value,
-        //起始日期
-        count = document.getElementsByClassName("form-control")[4].value,
-        //学习的月/周/天数
-        month = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("input")[1].checked,
-        //月份
-        week = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("input")[2].checked,
-        //周
-        day = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("input")[3].checked,
-        //天
-        StopDate = document.querySelectorAll("#DateTime-Calculator")[0].getElementsByTagName("span");
-    //得出的结果
+    //整个模块
+    var time = document.querySelector("[xl-input-BeginDate]").value,
+        count = document.querySelector("[xl-input-StudyTime]").value,
+        month = document.querySelector("[xl-choice-month]").checked,
+        week = document.querySelector("[xl-choice-week]").checked,
+        day = document.querySelector("[xl-choice-day]").checked,
+        StopDate = document.querySelector("[xl-display-result]").getElementsByTagName("span")
 
     if (month) {
-        StopDate[2].childNodes[0].nodeValue = CountDateMonth(time, count);
-        StopDate[1].childNodes[0].nodeValue = time;
         StopDate[0].childNodes[0].nodeValue = count + "月";
+        StopDate[1].childNodes[0].nodeValue = time;
+        StopDate[2].childNodes[0].nodeValue = CountDateMonth(time, count);
         StopDate[3].childNodes[0].nodeValue = StudyCostMonth(count) + "元";
     } else {
 
     }
     if (week) {
-        StopDate[2].childNodes[0].nodeValue = CountDateWeek(time, count);
-        StopDate[1].childNodes[0].nodeValue = time;
         StopDate[0].childNodes[0].nodeValue = count + "周";
+        StopDate[1].childNodes[0].nodeValue = time;
+        StopDate[2].childNodes[0].nodeValue = CountDateWeek(time, count);
         StopDate[3].childNodes[0].nodeValue = StudyCostWeek(count) + "元";
     } else {
 
     }
     if (day) {
-        StopDate[2].childNodes[0].nodeValue = CountDateDay(time, count);
-        StopDate[1].childNodes[0].nodeValue = time;
         StopDate[0].childNodes[0].nodeValue = count + "天";
+        StopDate[1].childNodes[0].nodeValue = time;
+        StopDate[2].childNodes[0].nodeValue = CountDateDay(time, count);
         StopDate[3].childNodes[0].nodeValue = StudyCostDay(count) + "元";
+
     }
 }
 
