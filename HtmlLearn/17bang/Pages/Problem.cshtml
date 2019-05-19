@@ -393,38 +393,21 @@
             <div class="article-label">
                 <h2><span class="glyphicon glyphicon-tag"></span>关键字</h2>
                 <hr>
-                <div id="keyword">
-                    <a href="#" data-used="23">编辑开发语言</a>
-                    <a href="#" data-used="54">c#</a>
-                    <a href="#" data-used="211">JAVA</a>
-                    <a href="#" data-used="645">工具软件</a>
-                    <a href="#" data-used="454">Javascript</a>
-                    <a href="#" data-used="454">顾问咨询</a>
-                    <a href="#" data-used="354">html</a>
-                    <a href="#" data-used="741">操作系统</a>
-                    <a href="#" data-used="35">VisualStudio</a>
-                    <a href="#" data-used="85">SQL</a>
-                    <a href="#" data-used="95">法律</a>
-                    <a href="#" data-used="350">职场</a>
-                    <a href="#" data-used="77">python</a>
-                    <a href="#" data-used="66">.net</a>
-                    <a href="#" data-used="685">css</a>
-                    <a href="#" data-used="577">Linux</a>
-                    <hr>
-                    <div class="col-sm-8">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="直接输入关键字查找">
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-search">
-                                </span>
+                <iframe src="/Keyword1" id="keywords"></iframe>
+                <hr>
+                <div class="col-sm-8">
+                    <div class="input-group" >
+                        <input type="text" class="form-control" placeholder="直接输入关键字查找">
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-search">
                             </span>
-                        </div>
+                        </span>
                     </div>
-                    <button type="submit" class="btn btn-default">
-                        <span class="glyphicon glyphicon-refresh"></span>
-                        换一批
-                    </button>
                 </div>
+                <button type="submit" class="btn btn-default" lkh-update>
+                    <span class="glyphicon glyphicon-refresh"></span>
+                    换一批
+                </button>
             </div>
             <div class="clearfix ranking-border">
                 <ul class="nav nav-tabs nav-justified" role="tablist">
@@ -551,17 +534,17 @@
             <div xl-tuition-calculator>
                 <div>
                     <h2>学费计算器（Web版）</h2>
-                    <input class="form-control" xl-input-BeginDate type="date" value="" placeholder="请输入开始学习的年/月/天"style="margin-bottom: 20px;" />
+                    <input class="form-control" xl-input-BeginDate type="date" value="" placeholder="请输入开始学习的年/月/天" style="margin-bottom: 20px;" />
                     请选择学习的时长按月/周/天填写
                 </div>
                 <div style="margin-bottom:20px;">
-                    <label class="checkbox-inline"><input xl-choice-month  type="radio" value="月" name="time" />月</label>
+                    <label class="checkbox-inline"><input xl-choice-month type="radio" value="月" name="time" />月</label>
                     <label class="checkbox-inline"><input xl-choice-week type="radio" value="周" name="time" />周</label>
                     <label class="checkbox-inline"><input xl-choice-day type="radio" value="天" name="time" />天</label>
                 </div>
                 <div>
-                    <input class="form-control" value="" xl-input-StudyTime style="width:50%;display:inline-block" placeholder="您要学习的月/周/天数。" type="text"/>
-                    <input class="btn btn-primary" type="submit" value="计算"/>
+                    <input class="form-control" value="" xl-input-StudyTime style="width:50%;display:inline-block" placeholder="您要学习的月/周/天数。" type="text" />
+                    <input class="btn btn-primary" type="submit" value="计算" />
                 </div>
                 <div style="color:red" xl-display-result>
                     您一共学习:<span class="h3"> </span><br />
@@ -569,6 +552,10 @@
                     截至日期:<span class="h3"> </span><br />
                     学费共计(请以实际费用为准):<span class="h3"> </span><br />
                 </div>
+            </div>
+            <div>
+                <canvas id="coord" width="200" height="200" style="border:1px dashed;"></canvas>
+                <span id="size"></span>
             </div>
             @* 上面div是下面作业临时加的 *@
         </div>

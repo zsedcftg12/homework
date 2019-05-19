@@ -1,0 +1,241 @@
+
+#GameStart > button {
+    margin-left: auto;
+    margin-right: auto;
+    color: paleturquoise;
+}
+
+.oneclay > img {
+    width: 260px;
+    height: 150px;
+    display: block;
+    position: relative;
+    top: 250px;
+    left: 310px;
+    z-index: -1;
+}
+
+.twoclay > img {
+    width: 260px;
+    height: 150px;
+    display: block;
+    position: relative;
+    top: 250px;
+    left: 380px;
+    z-index: -1;
+}
+
+.threeclay > img {
+    width: 260px;
+    height: 150px;
+    display: block;
+    position: relative;
+    top: 250px;
+    left: 460px;
+    z-index: -1;
+}
+
+.onesusliks > img {
+    position: absolute;
+    z-index: -2;
+    left: 385px;
+    top: 370px;
+    width: 7%
+}
+
+.twosusliks > img {
+    position: absolute;
+    z-index: -2;
+    left: 720px;
+    top: 370px;
+    width: 7%
+}
+
+.threesusliks > img {
+    position: absolute;
+    z-index: -2;
+    left: 1055px;
+    top: 370px;
+    width: 7%
+}
+/*地鼠动画效果*/
+.Mole1 {
+    position: relative;
+    animation-name: FirstMove;
+    animation-duration: 2s;
+}
+
+@keyframes FirstMove {
+    0% {
+        top: 405px;
+    }
+
+    50% {
+        top: 325px;
+    }
+
+    100% {
+        top: 405px;
+    }
+}
+
+.Mole2 {
+    position: relative;
+    animation-name: SecondMove;
+    animation-duration: 2s;
+}
+
+@keyframes SecondMove {
+    0% {
+        top: 635px;
+    }
+
+    50% {
+        top: 555px;
+    }
+
+    100% {
+        top: 635px;
+    }
+}
+
+.Mole3 {
+    position: relative;
+    animation-name: ThirdMove;
+    animation-duration: 2s;
+}
+
+@keyframes ThirdMove {
+    0% {
+        top: 865px;
+    }
+
+    50% {
+        top: 785px;
+    }
+
+    100% {
+        top: 865px;
+    }
+}
+
+.Mole4 {
+    position: relative;
+    animation-name: FourthMove;
+    animation-duration: 2s;
+}
+
+@keyframes FourthMove {
+    0% {
+        top: 405px;
+    }
+
+    50% {
+        top: 325px;
+    }
+
+    100% {
+        top: 405px;
+    }
+}
+
+.Mole5 {
+    position: relative;
+    animation-name: FifthMove;
+    animation-duration: 2s;
+}
+
+@keyframes FifthMove {
+    0% {
+        top: 635px;
+    }
+
+    50% {
+        top: 555px;
+    }
+
+    100% {
+        top: 635px;
+    }
+}
+
+.Mole6 {
+    position: relative;
+    animation-name: SixthMove;
+    animation-duration: 2s;
+}
+
+@keyframes SixthMove {
+    0% {
+        top: 865px;
+    }
+
+    50% {
+        top: 785px;
+    }
+
+    100% {
+        top: 865px;
+    }
+}
+
+.Mole7 {
+    position: relative;
+    animation-name: SeventhMove;
+    animation-duration: 2s;
+}
+
+@keyframes SeventhMove {
+    0% {
+        top: 405px;
+    }
+
+    50% {
+        top: 325px;
+    }
+
+    100% {
+        top: 405px;
+    }
+}
+
+.Mole8 {
+    position: relative;
+    animation-name: EighthMove;
+    animation-duration: 2s;
+}
+
+@keyframes EighthMove {
+    0% {
+        top: 635px;
+    }
+
+    50% {
+        top: 555px;
+    }
+
+    100% {
+        top: 635px;
+    }
+}
+
+.Mole9 {
+    position: relative;
+    animation-name: NinthMove;
+    animation-duration: 2s;
+}
+
+@keyframes NinthMove {
+    0% {
+        top: 865px;
+    }
+
+    50% {
+        top: 785px;
+    }
+
+    100% {
+        top: 865px;
+    }
+}
+/*以上地鼠动画效果*/

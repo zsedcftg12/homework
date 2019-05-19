@@ -7,6 +7,11 @@
     border: 1px solid #eee;
     background: #fbfbfb;
 }
+#keywords {
+    height: 254px;
+    width: 330px;
+    border:0px;
+}
 
 #blue-label {
     background-color: #5bc0de;

@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqlserver", "Sqlserver", "{
 		SqlServer\SQL4-17.sql = SqlServer\SQL4-17.sql
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleCityGame", "BattleCityGame\BattleCityGame.csproj", "{CD50F2EE-65D6-4321-9A93-6B4C83A540EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{68D549A0-00CF-4608-A693-82762CA0FDA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{68D549A0-00CF-4608-A693-82762CA0FDA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{68D549A0-00CF-4608-A693-82762CA0FDA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD50F2EE-65D6-4321-9A93-6B4C83A540EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD50F2EE-65D6-4321-9A93-6B4C83A540EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD50F2EE-65D6-4321-9A93-6B4C83A540EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD50F2EE-65D6-4321-9A93-6B4C83A540EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

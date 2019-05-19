@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\js\JavaScript.js" />
+    <Content Remove="wwwroot\js\module.js" />
     <Content Remove="wwwroot\js\site.js" />
     <Content Remove="wwwroot\js\site.min.js" />
   </ItemGroup>

@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/site.css" />
+    <style>
+        body {
+            background-size: 100%;
+            background-image: url(images/背景.jpg);
+        }
+    </style>
+</head>
+<body>
+    <div class="h3">
+        您的分数:
+        <span id="scoring">0</span>
+        <h3 style="color:red">剩余时间:</h3>
+        <button class="btn navbar-btn" style="margin-left:auto;margin-right:auto;">开始游戏</button>
+    </div>
+
+    <div id="HamsterPosition">
+        <div class="oneclay pull-left center-block">
+            <img src="~/images/土堆.png" />
+            <img src="~/images/土堆.png" style="top:330px;" />
+            <img src="~/images/土堆.png" style="top:410px;" />
+        </div>
+        <div class="twoclay pull-left">
+            <img src="~/images/土堆.png" />
+            <img src="~/images/土堆.png" style="top:330px;" />
+            <img src="~/images/土堆.png" style="top:410px;" />
+        </div>
+        <div class="threeclay pull-left">
+            <img src="~/images/土堆.png" />
+            <img src="~/images/土堆.png" style="top:330px;" />
+            <img src="~/images/土堆.png" style="top:410px;" />
+        </div>
+        <div class="onesusliks">
+            <img src="~/images/萌地鼠.png" lkh-mole1 class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole11 class="" />
+            <img src="~/images/萌地鼠.png" lkh-mole2 style="top:600px;" class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole12 style="top:600px;" class="" />
+            <img src="~/images/萌地鼠.png" lkh-mole3 style="top:830px;" class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole13 style="top:830px;" class="" />
+        </div>
+        <div class="twosusliks">
+            <img src="~/images/萌地鼠.png" lkh-mole4 class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole14 class="" />
+            <img src="~/images/萌地鼠.png" lkh-mole5 style="top:600px;" class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole15 style="top:600px;" class="" />
+            <img src="~/images/萌地鼠.png" lkh-mole6 style="top:830px;" class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole16 style="top:830px;" class="" />
+
+        </div>
+        <div class="threesusliks">
+            <img src="~/images/萌地鼠.png" lkh-mole7 class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole17 class="" />
+            <img src="~/images/萌地鼠.png" lkh-mole8 style="top:600px;" class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole18 style="top:600px;" class="" />
+            <img src="~/images/萌地鼠.png" lkh-mole9 style="top:830px;" class="" />
+            <img src="~/images/坏地鼠.png" lkh-mole19 style="top:830px;" class="" />
+        </div>
+    </div>
+    <script>
+        //鼠标样式
+        //var mouse = document.getElementsByTagName("html");
+        ////mouse[0].style.cursor = `url("/images/锤子.ico") 20 108,pointer`;
+        //mouse[0].onmousedown = function () {
+        //    mouse[0].style.cursor = 'url("/images/锤子敲下.ico")30 80,auto';
+        //}
+        //mouse[0].onmousedown = function () {
+        //    mouse[0].style.cursor = 'url("/images/锤子敲下.ico")30 80,auto';
+        //}
+        //mouse[0].onmouseup = function () {
+        //    mouse[0].style.cursor = `url("/images/锤子.ico")30 80,auto`;
+        //}
+        //点击开始游戏
+
+        document.querySelector("#GameStart").onclick = function () {
+            //随机出现地鼠
+            setInterval(function () {
+                var random = Math.floor(Math.random() * 19 + 1);
+                if (random <= 9) {
+                    document.querySelector(`[lkh-mole${random}]`).className = `Mole${random}`
+                    setTimeout(function () {
+                        document.querySelector(`[lkh-mole${random}]`).className = ``
+                    }, 2000)
+                } else if (random === 10) {
+                    //炸弹
+                } else {
+                    //出现坏地鼠，random-10是为了坏地鼠重用css动画
+                    document.querySelector(`[lkh-mole${random}]`).className = `Mole${random - 10}`
+                    setTimeout(function () {
+                        document.querySelector(`[lkh-mole${random}]`).className = ``
+                    }, 2000)
+                }
+            }, 2000)
+            var FirstRank = document.querySelector(".onesusliks").getElementsByTagName("img"),
+                SecondRank = document.querySelector(".twosusliks").getElementsByTagName("img"),
+                ThirdRank = document.querySelector(".threesusliks").getElementsByTagName("img"),
+                Scoring = document.querySelector("#scoring"),
+                scoring = 0;
+            for (let i = 0; i < FirstRank.length; i++) {
+                FirstRank[i].onclick = function () {
+                    scoring++
+                    Scoring.textContent = `${scoring}`
+                }
+            }
+            for (let i = 0; i < SecondRank.length; i++) {
+                SecondRank[i].onclick = function () {
+                    scoring++
+                    Scoring.textContent = `${scoring}`
+                }
+            }
+            for (let i = 0; i < ThirdRank.length; i++) {
+                ThirdRank[i].onclick = function () {
+                    scoring++
+                    Scoring.textContent = `${scoring}`
+                }
+            }
+        }
+    </script>
+    @RenderBody()
+</body>
+</html>

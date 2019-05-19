@@ -7,23 +7,24 @@
 //}
 ////////////////////http://localhost:59058/Problem
 
-////2.参考文章的全系列阅读功能，当滚动到页面底部时，将页面现有内容粘贴到页面底部，直到5次过后，在页面底部显示：已经没有更多内容了
-//var h = 0;
-//document.body.onscroll = function () {
-//    var height = document.documentElement.clientHeight,
+//2.参考文章的全系列阅读功能，当滚动到页面底部时，将页面现有内容粘贴到页面底部，直到5次过后，在页面底部显示：已经没有更多内容了
+
+//{
+//    let h = 0,
+//        height = document.documentElement.clientHeight,
 //        ContentHeight = document.documentElement.offsetHeight,
 //        scroll = document.documentElement.scrollTop,
 //        //获取页面的高度
-//        a = Math.ceil(scroll),
-//        //取整页面高度
-//        page = document.body,
-//        ClonePage = page.cloneNode(true);
-//    //复制页面
-//    if (a === ContentHeight - height && h < 5) {
-//        document.body.append(ClonePage);
-//        h += 1;
-//    } else {
-//        alert("已经没有更多内容了！！");
+//        a = Math.ceil(scroll);
+//    document.body.onscroll = function () {
+//        if (a === ContentHeight - height && h < 5) {
+//            let page = document.body,
+//                ClonePage = page.cloneNode(true);
+//            this.append(ClonePage);
+//            h += 1;
+//        } else {
+//            alert("已经没有更多内容了！！");
+//        }
 //    }
 //}
 ////////////////////http://localhost:59058/Problem
@@ -72,9 +73,9 @@
 ////////////////////http://localhost:59058
 
 
-////5.参考求助首页侧边栏“免费广告发布”弹出Modal，实现（不需要弹出Modal）：
-////(1.)根据下拉列表选中项，填充“文字内容”和“链接”文本框
-////(2.)勾选修改的checkbox，实现“文字内容”和“链接”文本框的禁用和启用
+//5.参考求助首页侧边栏“免费广告发布”弹出Modal，实现（不需要弹出Modal）：
+//(1.)根据下拉列表选中项，填充“文字内容”和“链接”文本框
+//(2.)勾选修改的checkbox，实现“文字内容”和“链接”文本框的禁用和启用
 //let list = document.getElementsByTagName("select")[0],
 //    input = document.getElementsByTagName("input");
 //list.onclick = function () {
