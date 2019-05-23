@@ -6,49 +6,109 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="~/css/BeatMole.css" />
+    <link rel="stylesheet" type="text/css" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <title>地鼠游戏</title>
 </head>
 <body>
-    <div class="h3">
-        <span style="color:red">
-            您的分数:
-            <span id="scoring">0</span>
-        </span>
-        <span style="color:red">剩余时间:</span>
-    </div>
-    <button class="btn btn-defaultcd">开始游戏</button>
-    <div class="clay">
-        <img src="~/images/土堆.png" style="left:320px;" />
-        <img src="~/images/土堆.png" style="left:420px;" />
-        <img src="~/images/土堆.png" style="left:520px;" />
-        <img src="~/images/土堆.png" style="top:450px;right:370px;" />
-        <img src="~/images/土堆.png" style="top:450px;right:280px;" />
-        <img src="~/images/土堆.png" style="top:450px;right:180px;" />
-        <img src="~/images/土堆.png" style="top:520px;left:320px;" />
-        <img src="~/images/土堆.png" style="top:520px;left:420px;" />
-        <img src="~/images/土堆.png" style="top:520px;left:520px;" />
-    </div>
-    <div class="mole"style="z-index:-2;">
-        <img src="~/images/萌地鼠.png" lkh-mole1 style="left:400px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole11 style="left:320px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole2 style="left:570px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole12 style="left:490px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole3 style="left:740px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole13 style="left:660px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole4 style="top:240px;right:80px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole14 style="top:240px;right:160px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole5 style="top:240px;left:85px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole15 style="top:240px;left:6px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole6 style="top:240px;left:255px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole16 style="top:240px;left:176px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole7 style="top:420px;right:565px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole17 style="top:420px;right:645px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole8 style="top:420px;right:390px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole18 style="top:420px;right:470px;" class="" />
-        <img src="~/images/萌地鼠.png" lkh-mole9 style="top:420px;right:220px;" class="" />
-        <img src="~/images/坏地鼠.png" lkh-mole19 style="top:420px;right:300px;" class="" />
-    </div>
+    <main class="container">
+        <div class="pull-left ranking-list">
+            <ol style="color:darkorange;">
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+                <li>
+                    未命名
+                    <span>得分：</span>
+                </li>
+            </ol>
+        </div>
+        <div id="user">
+            <div>
+                <span>名称：</span>
+            </div>
+            <div>
+                <span id="score">当前得分：</span>
+            </div>
+            <div>
+                <span>当前难度：</span>
+            </div>
+        </div>
+        <div class="h3 pull-right">
+            <span class="glyphicon glyphicon-hourglass"></span>
+            <span>剩余时间：</span>
+            <span id="remain-time"></span>
+        </div>
+        <button lkh-game-go type="button" class="btn btn-success" style="margin-left:170px;">开始游戏</button>
+        <div class="modal fade gameover" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" style="color:red;">游戏结束</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>很遗憾失败了┑(￣Д ￣)┍&hellip;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table>
+            <tbody lkh-game class="container">
+                <tr class="row">
+                    <td><img src="~/images/土堆.png" lkh-clay="1" class="clay" /></td>
+                    <td><img src="~/images/土堆.png" lkh-clay="2" class="clay" /></td>
+                    <td><img src="~/images/土堆.png" lkh-clay="3" class="clay" /></td>
+                </tr>
+                <tr class="row">
+                    <td><img src="~/images/土堆.png" lkh-clay="4" class="clay" /></td>
+                    <td><img src="~/images/土堆.png" lkh-clay="5" class="clay" /></td>
+                    <td><img src="~/images/土堆.png" lkh-clay="6" class="clay" /></td>
+                </tr>
+                <tr class="row">
+                    <td><img src="~/images/土堆.png" lkh-clay="7" class="clay" /></td>
+                    <td><img src="~/images/土堆.png" lkh-clay="8" class="clay" /></td>
+                    <td><img src="~/images/土堆.png" lkh-clay="9" class="clay" /></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <script src="~/js/TunkMole.js"></script>
 </body>
-
 </html>

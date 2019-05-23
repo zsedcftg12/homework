@@ -1,207 +1,61 @@
-﻿#GameStart {
-    color: #ffffff;
+﻿/** {
+    border: 1px dashed;
+}*/
+
+main {
     margin-left: auto;
     margin-right: auto;
-    width: 5%;
+    max-width: 1020px;
+    min-height: 679px;
+    background-image: url(/images/背景.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-body {
-    background-size: 100%;
-    background-image: url(images/背景.jpg);
+table {
+    margin-top: 280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.clay > img {
-    width: 15%;
-    height:112px;
+td {
     position: relative;
-    top: 300px;
 }
 
-.mole > img {
-    width: 5%;
-    position:relative;
-    top:90px;
-    z-index:-1;
-}
-
-/*地鼠动画效果*/
-.Mole1 {
+.clay {
+    margin: 15px 30px 20px 30px;
     position: relative;
+    z-index: 10;
+}
+
+.ranking-list {
+    width: 170px;
+    border: 1px solid #00ffff;
+    background-color: gainsboro;
+}
+
+#user{
+    color:red;
+    float:left;
+}
+.lovable-mole {
+    position: absolute;
+    bottom: 31px;
+    left: 86px;
     animation-name: FirstMove;
-    animation-duration: 2s;
+    animation-duration: 5s;
 }
 
 @keyframes FirstMove {
     0% {
-        top: 405px;
+        bottom: 31px;
     }
 
     50% {
-        top: 325px;
+        bottom: 70px;
     }
 
     100% {
-        top: 405px;
+        bottom: 31px;
     }
 }
-
-.Mole2 {
-    position: relative;
-    animation-name: SecondMove;
-    animation-duration: 2s;
-}
-
-@keyframes SecondMove {
-    0% {
-        top: 635px;
-    }
-
-    50% {
-        top: 555px;
-    }
-
-    100% {
-        top: 635px;
-    }
-}
-
-.Mole3 {
-    position: relative;
-    animation-name: ThirdMove;
-    animation-duration: 2s;
-}
-
-@keyframes ThirdMove {
-    0% {
-        top: 865px;
-    }
-
-    50% {
-        top: 785px;
-    }
-
-    100% {
-        top: 865px;
-    }
-}
-
-.Mole4 {
-    position: relative;
-    animation-name: FourthMove;
-    animation-duration: 2s;
-}
-
-@keyframes FourthMove {
-    0% {
-        top: 405px;
-    }
-
-    50% {
-        top: 325px;
-    }
-
-    100% {
-        top: 405px;
-    }
-}
-
-.Mole5 {
-    position: relative;
-    animation-name: FifthMove;
-    animation-duration: 2s;
-}
-
-@keyframes FifthMove {
-    0% {
-        top: 635px;
-    }
-
-    50% {
-        top: 555px;
-    }
-
-    100% {
-        top: 635px;
-    }
-}
-
-.Mole6 {
-    position: relative;
-    animation-name: SixthMove;
-    animation-duration: 2s;
-}
-
-@keyframes SixthMove {
-    0% {
-        top: 865px;
-    }
-
-    50% {
-        top: 785px;
-    }
-
-    100% {
-        top: 865px;
-    }
-}
-
-.Mole7 {
-    position: relative;
-    animation-name: SeventhMove;
-    animation-duration: 2s;
-}
-
-@keyframes SeventhMove {
-    0% {
-        top: 405px;
-    }
-
-    50% {
-        top: 325px;
-    }
-
-    100% {
-        top: 405px;
-    }
-}
-
-.Mole8 {
-    position: relative;
-    animation-name: EighthMove;
-    animation-duration: 2s;
-}
-
-@keyframes EighthMove {
-    0% {
-        top: 635px;
-    }
-
-    50% {
-        top: 555px;
-    }
-
-    100% {
-        top: 635px;
-    }
-}
-
-.Mole9 {
-    position: relative;
-    animation-name: NinthMove;
-    animation-duration: 2s;
-}
-
-@keyframes NinthMove {
-    0% {
-        top: 865px;
-    }
-
-    50% {
-        top: 785px;
-    }
-
-    100% {
-        top: 865px;
-    }
-}
-/*以上地鼠动画效果*/
