@@ -18,56 +18,77 @@
         <div class="pull-left ranking-list">
             <ol style="color:darkorange;">
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
                 <li>
-                    未命名
+                    <span>名称：</span>
+                    <span lkh-name></span>
                     <span>得分：</span>
+                    <span lkh-rank></span>
                 </li>
             </ol>
         </div>
         <div id="user">
             <div>
-                <span>名称：</span>
+                <span id="UserName">名称：</span>
             </div>
             <div>
                 <span id="score">当前得分：</span>
             </div>
             <div>
-                <span>当前难度：</span>
+                <span>当前难度:</span>
+                <span id="GameMode"></span>
             </div>
         </div>
         <div class="h3 pull-right">
@@ -75,7 +96,11 @@
             <span>剩余时间：</span>
             <span id="remain-time"></span>
         </div>
-        <button lkh-game-go type="button" class="btn btn-success" style="margin-left:170px;">开始游戏</button>
+        <div id="button">
+            <button lkh-game-go type="button" class="btn btn-success" style="margin-left:200px;">开始游戏</button>
+            <button lkh-game-music-on type="button" class=" button pull-left">关闭背景音乐</button>
+            <button lkh-game-music-off type="button" class=" button pull-left">打开背景音乐</button>
+        </div>
         <div class="modal fade gameover" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -85,6 +110,16 @@
                     </div>
                     <div class="modal-body">
                         <p>很遗憾失败了┑(￣Д ￣)┍&hellip;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade record-breaking" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" style="color:red;">恭喜您！破纪录啦~~</h4>
                     </div>
                 </div>
             </div>
@@ -109,6 +144,23 @@
             </tbody>
         </table>
     </main>
+    <div id="music">
+        <audio id="tunk">
+            <source src="~/images/敲打.wav" />
+        </audio>
+        <audio id="spring">
+            <source src="~/images/弹簧-短.wav" />
+        </audio>
+        <audio id="boom">
+            <source src="~/images/爆炸.mp3" />
+        </audio>
+        <audio id="appear">
+            <source src="~/images/一下出现.wav" />
+        </audio>
+        <audio id="background">
+            <source src="~/images/背景音乐.wav" />
+        </audio>
+    </div>
     <script src="~/js/TunkMole.js"></script>
 </body>
 </html>

@@ -26,6 +26,13 @@ td {
     margin: 15px 30px 20px 30px;
     position: relative;
     z-index: 10;
+    height: 80px;
+}
+
+.button {
+    margin-left: 200px;
+    display: none;
+    margin-top:20px;
 }
 
 .ranking-list {
@@ -34,28 +41,63 @@ td {
     background-color: gainsboro;
 }
 
-#user{
-    color:red;
-    float:left;
+#user {
+    color: red;
+    float: left;
 }
+
+.Mine {
+    position: absolute;
+    bottom: 80px;
+    left: 79px;
+}
+
 .lovable-mole {
     position: absolute;
-    bottom: 31px;
-    left: 86px;
+    bottom: 37px;
+    left: 106px;
     animation-name: FirstMove;
-    animation-duration: 5s;
+    animation-duration: 2.5s;
+}
+
+.lovable-mole-Primary {
+    position: absolute;
+    bottom: 37px;
+    left: 106px;
+    animation-name: FirstMove;
+    animation-duration: 2s;
+}
+
+.lovable-mole-Difficult {
+    position: absolute;
+    bottom: 37px;
+    left: 106px;
+    animation-name: FirstMove;
+    animation-duration: 1s;
+}
+
+.lovable-mole-Nightmare {
+    position: absolute;
+    bottom: 37px;
+    left: 106px;
+    animation-name: FirstMove;
+    animation-duration: 0.5s;
 }
 
 @keyframes FirstMove {
     0% {
-        bottom: 31px;
+        bottom: 37px;
     }
 
-    50% {
-        bottom: 70px;
+    25% {
+        bottom: 80px;
+    }
+
+    85% {
+        bottom: 80px;
     }
 
     100% {
-        bottom: 31px;
+        bottom: 37px;
     }
 }
