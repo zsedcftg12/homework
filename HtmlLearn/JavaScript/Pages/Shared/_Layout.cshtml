@@ -37,48 +37,6 @@
     </form>
     <script>
 
-        //2.参考用户注册页面，创建一下函数：
-        //显示密码的长度
-        //如果密码和确认密码不一致，弹出提示
-        //参考用户资料页面，控制台显示出用户的：性别 / 出生年月 / 关注（关键字）/ 自我介绍
-        document.getElementsByTagName("input")[7].onclick = function () {
-            if (document.getElementsByName("password")[0].value !== document.getElementsByTagName("input")[2].value) {
-                alert("两次输入的密码不同,请重新输入！！");
-            } else {
-                UserDatum()
-                //提交表单函数
-            }
-        }
-        function UserDatum() {
-            alert("用户名：" + document.getElementsByTagName("input")[0].value + "\n密码：" + document.getElementsByTagName("input")[1].value
-                + "\n确认密码:" + document.getElementsByTagName("input")[2].value + "\n性别：" + GetGender() + "\n地区:" + GetArea() + "\n生日:" +
-                document.getElementsByTagName("input")[5].value + "\n关键字:" + document.getElementsByTagName("input")[6].value + "\n自我介绍:" +
-                document.getElementsByTagName("textarea")[0].value + "\n密码长度：" + console.log(document.getElementsByName("password")[0].value.length))
-        }
-        function GetArea() {
-            let area = ""
-            if (document.getElementsByTagName("select")[0].value === "js") {
-                area = "江苏"
-            } else if (document.getElementsByTagName("select")[0].value === "hn") {
-                area = "湖南"
-            } else if (document.getElementsByTagName("select")[0].value === "hlj") {
-                area = "黑龙江"
-            }
-            return area
-        }
-        function GetGender() {
-            var gender = ""
-            if (document.getElementsByTagName("input")[3].checked === true) {
-                gender = "男"
-            } else {
-                gender = "女"
-            }
-            if (document.getElementsByTagName("input")[4].checked === true) {
-                gender = "女"
-            } else {
-                gender = "男"
-            }
-            return gender
         
 
 

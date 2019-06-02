@@ -90,12 +90,12 @@
 //        for (var j = i + 1; j < arr.length; j++) {
 //            if (arr[i] === arr[j]) {
 //                arr.splice(i, 1);  //判断一旦外循环=内循环 删除外循环相同的值
-//                i--;
 //            }
 //        }
 //    }
 //    return arr;
 //}
+//ToRepeated([8, 14, 8, '8', '14', 14, '8', true, false, true, true, false, '路炜', '路炜', '老程', '小龙', '小龙'])
 
 ////11.编写一个计算源栈返还红包金额的函数 Redbag() ，参考：
 //function money(name, discount, man) {
