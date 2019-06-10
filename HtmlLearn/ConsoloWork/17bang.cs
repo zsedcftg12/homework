@@ -3,52 +3,116 @@ using System.Collections.Generic;
 using System.Text;
 namespace ConsoloWork
 {
-    public class User
+    #region 方法接口
+    interface IFunction<T>
     {
-        public string Author { get; set; }
-        public string Title { get; set; }
-        public string Body { get; set; }
-        internal void Publish()
+        T Publish();
+        int Agree();
+        int Disagree();
+
+    }
+    #endregion
+    #region 求助
+    public class Problem<T> : IFunction<T>
+    {
+        public User<T> Author;
+        public T Title;
+        public T Body;
+        public int amount;
+        public Problem(User<T> author, T title, T body)
         {
-            Console.WriteLine("你发布了一个求助");
+            this.Title = title;
+            this.Author = author;
+            this.Body = body;
         }
-        internal void Agree()
+
+        public int Agree()
         {
-            Console.WriteLine("你被人赞了一下");
+            Console.WriteLine($"当前有{amount}个赞");
+            return ++amount;
         }
-        internal void Disagree()
+
+        public int Disagree()
         {
-            Console.WriteLine("你被人踩了一下");
+            Console.WriteLine($"当前有{amount}个赞");
+            return --amount;
+        }
+
+        public T Publish()
+        {
+            throw new NotImplementedException();
         }
     }
-    public class Problem : User
+    #endregion
+    #region 用户
+    public class User<T>
     {
-        internal Comment wp = new Comment { NameID = "王平" };
-        internal Comment lc = new Comment { NameID = "老程" };
-        internal Comment wx = new Comment { NameID = "文轩" };
-
+        public T Name { get; set; }
+        public int Id { get; set; }
+        public Article<T> article;
     }
-    public class Article : User
+    #endregion
+    #region 文章
+    public class Article<T> : Problem<T>, IFunction<T>//文章
     {
-
+        public new User<T> Author;
+        public new T Title;
+        public new T Body;
+        public Appraise<T> Appraise;
+        public DateTime PublishTime;
+        public Article(User<T> author, T title, T body, Appraise<T> appraise, DateTime publishtime) : base(author, title, body)
+        {
+            this.Title = title;
+            this.Author = author;
+            this.Body = body;
+            this.Appraise = appraise;
+            this.PublishTime = publishtime;
+        }
+        IList<Keyword> KeyWords;
     }
-    public class Suggest : User
+    #endregion
+    #region 意见建议
+    class Suggest<T> : Problem<T>, IFunction<T>//意见建议
     {
-
+        public new User<T> Author;
+        public new T Title;
+        public new T Body;
+        public Suggest(User<T> author, T title, T body) : base(author, title, body)
+        {
+            this.Title = title;
+            this.Author = author;
+            this.Body = body;
+        }
     }
-    public class Comment//评论
+    #endregion
+    #region 评论
+    class Comment<T>//评论
     {
-        internal string NameID { get; set; }
+        public T body;
+        public Article<T> article;
+        public Appraise<T> appraise;
+        public Comment(Article<T> Article, Appraise<T> Appraise, T Body)
+        {
+            this.article = Article;
+            this.appraise = Appraise;
+            this.body = Body;
+        }
+        //        一篇文章可以有多个评论
+        //一个评论必须有一个它所评论的文章
+        //每个文章和评论都有一个评价
+        //一篇文章可以有多个关键字，一个关键字可以对应多篇文章
     }
-    public class Appraise//评价
+    #endregion
+    #region 评价
+    public class Appraise<T>//评价
     {
-
+        public T Speak { get; set; }
     }
+    #endregion
+    #region 关键字
     public class Keyword//关键字
     {
-
+        IList<Article<String>> Articles;
     }
-    /// <summary>
-    /// //////////////////////////////////////////
-    /// </summary>
+    #endregion
 }

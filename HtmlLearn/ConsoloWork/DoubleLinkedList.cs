@@ -7,7 +7,7 @@ namespace ConsoloWork
     //用泛型实现一个类：双向链表节点DLinkNode<T>，包含以下几个属性：
     public class DlinkNode<T>
     {
-       internal DlinkNode<T> Previous { get; set; }
+        internal DlinkNode<T> Previous { get; set; }
         internal DlinkNode<T> Next { get; set; }
         internal T Content { get; set; }
     }
@@ -16,7 +16,6 @@ namespace ConsoloWork
     {
         T Head { get; set; }
         T Tail { get; set; }
-        int Count;
         //TODO:索引this[n]获得第n个节点
         internal void AddAftrr(T node, T beAdded)  //在beAdded之后添加节点node
         {
@@ -26,7 +25,7 @@ namespace ConsoloWork
         {
 
         }
-        internal void Swap(T a,T b)//交换a节点和b节点的位置
+        internal void Swap(T a, T b)//交换a节点和b节点的位置
         {
 
         }
