@@ -8,56 +8,8 @@ namespace ConsoloWork
     {
         static void Main(string[] args)
         {
-            #region 在之前“文章 / 评价 / 评论 / 用户 / 关键字”对象模型的基础上，添加相应的数据，然后完成以下操作：
-            //List<Article<string>> articles = new List<Article<string>> {
-            //    new Article<string>(new User<string> { Name = "小龙", Id = 1 },"这题好难","不写了", new Appraise<string> { Speak = "拳打南山养老院" },new DateTime(2019,5,10)),
-            //    new Article<string>(new User<string> { Name = "飞哥", Id = 2 },"这能叫题？","这题这么简单，是给人做的吗？", new Appraise<string> { Speak = "脚踢北海幼儿园" },new DateTime(2019,6,05)),
-            //    new Article<string>(new User<string> { Name = "老程", Id = 3 },"我完事了","你呢", new Appraise<string> { Speak = "5秒完事" },new DateTime(2019,6,06)),
-            //    new Article<string>(new User<string> { Name = "文轩", Id = 4 },"我也完事了","弟弟", new Appraise<string> { Speak = "999" },new DateTime(2019,6,06)),
-            //    new Article<string>(new User<string> { Name = "王平", Id = 5 },"什么作？","什么业？", new Appraise<string> { Speak = "666" },new DateTime(2019,6,10)),
-            //    new Article<string>(new User<string> { Name = "小鱼", Id = 6 },"吃吃吃吃","吃就完事了", new Appraise<string> { Speak = "吃。。。" },new DateTime(2019,12,10))
-            //};
-            #endregion
-            List<User<string>> users = new List<User<string>>() {
-                new User<string>{ Name = "小龙",Id = 1,}
-                };
-            #region 找出“飞哥”发布找出评论数量最多的文章的文章
-            //var excellent = from a in articles
-            //                where a.Author.Name.StartsWith("飞")
-            //                select a;
-            #endregion
-            #region 找出2019年1月1日以后“小鱼”发布的文章
-            //var excellent = from a in articles
-            //                where a.PublishTime > new DateTime(2019 / 1 / 1) && a.Author.Name == "小鱼"
-            //                select a;
-            //foreach (var item in excellent)
-            //{
-            //    Console.WriteLine($"{item.PublishTime}:{item.Author.Name}:{item.Title}:{item.Body}");
-            //} 
-            #endregion
-            #region 按发布时间升序 / 降序排列显示文章
-            //var excellent = from a in articles
-            //                orderby a.PublishTime descending  //升序
-            //                //orderby a.PublishTime ascending  //降序
-            //                select a;
-            //foreach (var item in excellent)
-            //{
-            //    Console.WriteLine($"{item.Author.Name}--{item.Title}--{item.Body}--{item.PublishTime}");
-            //} 
-            #endregion
-            #region 统计每个用户各发布了多少篇文章
-            //var excellent = from a in articles
-            //                group a by a.Author.Name into user
-            //                select new
-            //                {
-            //                    //待作。。。。。。
-            //                };
-            #endregion
-            #region 找出包含关键字“C#”或“.NET”的文章
+            OutputFunc.Output();//调用17bang
 
-            #endregion
-            #region 找出评论数量最多的文章 
-            #endregion
             //problem = new Problem<string>(new User<string> { Name = "小龙", Id = 1 }, "哈哈哈", "嘿嘿嘿");
             ////为排序定义一个接口，并在冒泡”和“快速排序”中实现
             ////用接口实例（不是类的实例）调用“排序”的方法

@@ -15,7 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sqlserver", "Sqlserver", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleCityGame", "BattleCityGame\BattleCityGame.csproj", "{CD50F2EE-65D6-4321-9A93-6B4C83A540EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoloWork", "ConsoloWork\ConsoloWork.csproj", "{1BC01BF0-3DEA-4F08-A9EB-6FF1C11DD3F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoloWork", "ConsoloWork\ConsoloWork.csproj", "{1BC01BF0-3DEA-4F08-A9EB-6FF1C11DD3F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "framwork", "framwork1\framwork.csproj", "{D9C7F142-DFD4-422F-9638-5FD6490BBC41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1BC01BF0-3DEA-4F08-A9EB-6FF1C11DD3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BC01BF0-3DEA-4F08-A9EB-6FF1C11DD3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BC01BF0-3DEA-4F08-A9EB-6FF1C11DD3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9C7F142-DFD4-422F-9638-5FD6490BBC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9C7F142-DFD4-422F-9638-5FD6490BBC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9C7F142-DFD4-422F-9638-5FD6490BBC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9C7F142-DFD4-422F-9638-5FD6490BBC41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
